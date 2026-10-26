@@ -1,21 +1,66 @@
 <!DOCTYPE html>
-<html lang="en-AU">
+<html lang="en-AU" data-root="">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <!-- Fallback title/description; the real ones come from js/content.js -->
   <title>The House That Waited</title>
-  <meta name="description" content="A companion website for Hameward Bend, coming soon.">
-  <style>
-    body { margin: 0; min-height: 100vh; display: grid; place-items: center; background: #f4ecd8; color: #1f2a44; font-family: Georgia, "Times New Roman", serif; text-align: center; padding: 1.5rem; }
-    main { max-width: 32rem; }
-    h1 { font-size: 2.2rem; margin: 0 0 .75rem; }
-    p { font-size: 1.15rem; line-height: 1.6; margin: 0; color: #5a4632; }
-  </style>
+  <meta name="description" content="A companion website for Hameward Bend – A Family’s Journey Home.">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/content.js" defer></script>
+  <script src="js/main.js" defer></script>
 </head>
-<body>
-  <main>
-    <h1>The House That Waited</h1>
-    <p>A companion website for <em>Hameward Bend</em>. Coming soon.</p>
+<body data-page="home">
+  <a class="skip-link" href="#main" data-content="site.skipLink">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" data-content="site.title" href="./">The House That Waited</a>
+      <nav class="site-nav" data-aria-label="site.navLabel" aria-label="Main">
+        <ul class="nav-list" data-list="nav"></ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <noscript>
+      <p class="noscript">This site needs JavaScript switched on to show its content.</p>
+    </noscript>
+
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h1 id="hero-heading" data-content="site.title"></h1>
+          <p class="hero-subtitle" data-content="home.hero.subtitle"></p>
+          <figure class="epigraph">
+            <blockquote><p data-content="home.hero.epigraph.quote"></p></blockquote>
+            <figcaption>&mdash; <span data-content="home.hero.epigraph.cite"></span></figcaption>
+          </figure>
+          <p class="welcome" data-content="home.hero.welcome"></p>
+        </div>
+
+        <!-- Photo-frame placeholder: swap for an <img> inside .photo-frame when Julie confirms an original -->
+        <figure class="hero-photo">
+          <div class="photo-frame" role="img" data-aria-label="home.hero.photoAlt">
+            <span class="marker" data-content="markers.heroPhoto"></span>
+          </div>
+        </figure>
+      </div>
+    </section>
+
+    <section class="doors" aria-labelledby="doors-heading">
+      <div class="container">
+        <h2 id="doors-heading" data-content="home.doors.heading"></h2>
+        <ul class="door-grid" data-list="home.doors.items"></ul>
+      </div>
+    </section>
   </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p data-content="site.footer"></p>
+    </div>
+  </footer>
 </body>
 </html>

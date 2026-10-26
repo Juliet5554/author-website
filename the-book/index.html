@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en-AU" data-root="../">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <!-- Fallback title/description; the real ones come from js/content.js -->
+  <title>The Book | The House That Waited</title>
+  <meta name="description" content="An outline of Hameward Bend – A Family’s Journey Home, by Julie Tan.">
+  <link rel="stylesheet" href="../css/styles.css">
+  <script src="../js/content.js" defer></script>
+  <script src="../js/main.js" defer></script>
+</head>
+<body data-page="book">
+  <a class="skip-link" href="#main" data-content="site.skipLink">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" data-content="site.title" href="../">The House That Waited</a>
+      <nav class="site-nav" data-aria-label="site.navLabel" aria-label="Main">
+        <ul class="nav-list" data-list="nav"></ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <noscript>
+      <p class="noscript">This site needs JavaScript switched on to show its content.</p>
+    </noscript>
+
+    <section class="book-head" aria-labelledby="book-title">
+      <div class="container book-head-inner">
+        <!-- DOM order = reading order: title block first, cover after -->
+        <div class="book-head-text">
+          <h1 id="book-title" data-content="book.title"></h1>
+          <p class="byline" data-content="book.byline"></p>
+          <p class="kicker" data-content="book.kicker"></p>
+          <figure class="epigraph">
+            <blockquote><p data-content="book.epigraph.quote"></p></blockquote>
+            <figcaption data-content="book.epigraph.cite"></figcaption>
+          </figure>
+          <p class="where-to-buy" data-content="bookPage.whereToBuy"></p>
+        </div>
+
+        <!-- Cover placeholder: swap for an <img> when Julie supplies a cover -->
+        <figure class="book-cover">
+          <div class="cover-placeholder" role="img" data-aria-label="bookPage.coverAlt">
+            <span class="marker" data-content="markers.bookCover"></span>
+          </div>
+        </figure>
+      </div>
+    </section>
+
+    <div class="container reading">
+      <section aria-labelledby="story-heading">
+        <h2 id="story-heading" data-content="book.story.heading"></h2>
+        <div data-paragraphs="book.story.paragraphs"></div>
+      </section>
+
+      <section aria-labelledby="journey-heading">
+        <h2 id="journey-heading" data-content="book.journey.heading"></h2>
+        <ol class="parts" data-list="book.journey.parts"></ol>
+      </section>
+
+      <section aria-labelledby="heart-heading">
+        <h2 id="heart-heading" data-content="book.heart.heading"></h2>
+        <div data-paragraphs="book.heart.paragraphs"></div>
+      </section>
+
+      <section aria-labelledby="beyond-heading">
+        <h2 id="beyond-heading" data-content="book.beyond.heading"></h2>
+        <div data-paragraphs="book.beyond.paragraphs"></div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p data-content="site.footer"></p>
+    </div>
+  </footer>
+</body>
+</html>

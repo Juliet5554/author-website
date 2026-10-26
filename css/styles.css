@@ -1,0 +1,331 @@
+/* ==========================================================================
+   1. DESIGN TOKENS: every colour and font on the site is set here.
+      Change a value below and the whole site follows.
+      Direction: "Photograph Album" (warm parchment, sepia, navy lettering).
+   ========================================================================== */
+
+:root {
+  /* ---- Fonts (system serif stack: no downloads, works offline) ---- */
+  --font-display: Georgia, "Times New Roman", serif; /* headings */
+  --font-body: Georgia, "Times New Roman", serif;    /* reading text */
+
+  /* ---- Palette ---- */
+  --color-bg: #f4ecd8;           /* page background: parchment */
+  --color-surface: #fbf6ea;      /* cards, photo mats */
+  --color-surface-alt: #ebe1c9;  /* alternate band */
+  --color-text: #1f2a44;         /* body text: navy */
+  --color-text-muted: #5a4632;   /* secondary text: sepia brown */
+  --color-heading: #1f2a44;
+  --color-link: #1f2a44;
+  --color-line: #cdbf9f;         /* borders and dividers */
+  --color-photo: #e2d6bd;        /* inside the photo frame */
+  --color-corner: #3a2e24;       /* photo corners */
+  --color-focus: #8a3b12;        /* keyboard focus ring */
+  --color-marker-bg: #f2b630;    /* amber "[ placeholder ]" markers */
+  --color-marker-text: #1f2a44;
+
+  /* ---- Layout ---- */
+  --width-page: 64rem;
+  --width-reading: 40rem;
+  --gutter: 1.25rem;
+}
+
+/* ==========================================================================
+   2. BASE
+   ========================================================================== */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 1.125rem;
+  line-height: 1.65;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  color: var(--color-heading);
+  font-weight: normal;
+  line-height: 1.2;
+  margin: 0 0 0.6em;
+}
+
+h1 { font-size: 2.25rem; }
+h2 { font-size: 1.75rem; }
+h3 { font-size: 1.3rem; }
+
+p { margin: 0 0 1em; }
+
+a { color: var(--color-link); text-underline-offset: 0.2em; }
+
+:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 3px;
+}
+
+#main:focus { outline: none; }
+
+.container {
+  width: 100%;
+  max-width: var(--width-page);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+.skip-link {
+  position: absolute;
+  left: var(--gutter);
+  top: -4rem;
+  z-index: 10;
+  padding: 0.6rem 1rem;
+  background: var(--color-text);
+  color: var(--color-bg);
+}
+.skip-link:focus { top: 0.5rem; }
+
+.noscript {
+  max-width: var(--width-reading);
+  margin: 2rem auto;
+  padding: 0 var(--gutter);
+}
+
+/* Amber placeholder markers */
+.marker {
+  display: inline-block;
+  padding: 0.2em 0.6em;
+  background: var(--color-marker-bg);
+  color: var(--color-marker-text);
+  font-family: ui-monospace, Consolas, monospace;
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+/* ==========================================================================
+   3. HEADER AND FOOTER
+   ========================================================================== */
+
+.site-header { border-bottom: 1px solid var(--color-line); }
+
+.header-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem 1.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.brand {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  text-decoration: none;
+}
+
+.nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-list a {
+  display: inline-block;
+  padding: 0.35rem 0;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+}
+.nav-list a:hover { border-bottom-color: var(--color-line); }
+.nav-list a[aria-current="page"] { border-bottom-color: var(--color-text); }
+
+.site-footer {
+  margin-top: 3rem;
+  padding: 1.75rem 0 2.5rem;
+  border-top: 1px solid var(--color-line);
+  color: var(--color-text-muted);
+  font-size: 1rem;
+}
+.site-footer p { margin: 0; }
+
+/* ==========================================================================
+   4. HOME
+   ========================================================================== */
+
+.hero { padding: 2.5rem 0 3rem; }
+
+.hero-inner { display: grid; gap: 2.5rem; }
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  font-style: italic;
+  color: var(--color-text-muted);
+}
+
+.epigraph { margin: 1.75rem 0; padding-left: 1.1rem; border-left: 3px solid var(--color-line); }
+.epigraph blockquote { margin: 0; }
+.epigraph p { margin: 0 0 0.35rem; font-style: italic; font-size: 1.2rem; }
+.epigraph figcaption { color: var(--color-text-muted); font-size: 1rem; }
+
+.welcome { max-width: 32rem; }
+
+/* Photo-frame placeholder: parchment mat, sepia picture area, photo corners */
+.hero-photo { margin: 0; }
+
+.photo-frame {
+  position: relative;
+  display: grid;
+  place-items: center;
+  aspect-ratio: 4 / 3;
+  padding: 1rem;
+  text-align: center;
+  background: var(--color-photo);
+  border: 0.9rem solid var(--color-surface);
+  box-shadow: 0 2px 10px rgba(58, 46, 36, 0.25);
+  transform: rotate(1.2deg);
+}
+
+.photo-frame::before,
+.photo-frame::after {
+  content: "";
+  position: absolute;
+  width: 1.6rem;
+  height: 1.6rem;
+  background: var(--color-corner);
+}
+.photo-frame::before { top: 0; left: 0; clip-path: polygon(0 0, 100% 0, 0 100%); }
+.photo-frame::after { bottom: 0; right: 0; clip-path: polygon(100% 0, 100% 100%, 0 100%); }
+
+.doors {
+  padding: 2.5rem 0 3rem;
+  background: var(--color-surface-alt);
+}
+
+.door-grid {
+  display: grid;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.door {
+  position: relative;
+  padding: 1.25rem 1.25rem 1rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-line);
+}
+.door h3 { margin-bottom: 0.3rem; }
+.door-status { margin: 0; color: var(--color-text-muted); font-size: 1rem; }
+.door-soon h3 { color: var(--color-text-muted); }
+
+/* Whole card is the link target */
+.door-live a { text-decoration: none; }
+.door-live a::after { content: ""; position: absolute; inset: 0; }
+.door-live:hover { border-color: var(--color-text); }
+.door-live:focus-within { outline: 3px solid var(--color-focus); outline-offset: 3px; }
+.door-live a:focus-visible { outline: none; }
+
+/* ==========================================================================
+   5. THE BOOK
+   ========================================================================== */
+
+.book-head { padding: 2.5rem 0 1.5rem; }
+.book-head-inner { display: grid; gap: 2rem; }
+
+.kicker {
+  margin-bottom: 0.5rem;
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.byline { font-size: 1.2rem; color: var(--color-text-muted); }
+.where-to-buy { margin-bottom: 0; color: var(--color-text-muted); }
+
+.book-cover { margin: 0; }
+.cover-placeholder {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  max-width: 14rem;
+  aspect-ratio: 2 / 3;
+  padding: 1rem;
+  text-align: center;
+  background: var(--color-photo);
+  border: 2px dashed var(--color-text-muted);
+}
+
+.reading { max-width: calc(var(--width-reading) + 2 * var(--gutter)); }
+.reading section { margin-top: 2.5rem; }
+
+.parts {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.part {
+  margin-bottom: 1.5rem;
+  padding: 0 0 0.5rem 1.1rem;
+  border-left: 3px solid var(--color-line);
+}
+.part h3 { font-size: 1.2rem; }
+.part-number { margin-right: 0.15em; color: var(--color-text-muted); }
+
+/* ==========================================================================
+   6. WIDER SCREENS
+   ========================================================================== */
+
+@media (min-width: 48rem) {
+  :root { --gutter: 2rem; }
+  h1 { font-size: 3rem; }
+
+  .hero-inner { grid-template-columns: 1.1fr 1fr; align-items: center; gap: 3.5rem; }
+  .door-grid { grid-template-columns: repeat(2, 1fr); }
+  .book-head-inner { grid-template-columns: 1fr 14rem; align-items: start; gap: 3rem; }
+}
+
+@media (min-width: 64rem) {
+  .door-grid { grid-template-columns: repeat(4, 1fr); }
+}
+
+/* ==========================================================================
+   7. MOTION: only when the visitor hasn't asked for less
+   ========================================================================== */
+
+@media (prefers-reduced-motion: no-preference) {
+  .door { transition: border-color 0.2s ease; }
+  .nav-list a { transition: border-color 0.2s ease; }
+}
+
+/* ==========================================================================
+   8. DEVELOPER QA TOOLS (?debug=alt, ?debug=headings): hidden otherwise
+   ========================================================================== */
+
+.debug-alt {
+  display: block;
+  margin-top: 0.4rem;
+  padding: 0.25rem 0.5rem;
+  background: #000;
+  color: #fff;
+  font: 12px/1.4 ui-monospace, Consolas, monospace;
+}
+
+.debug-headings {
+  padding: 0.75rem 1rem;
+  background: #000;
+  color: #fff;
+  font: 13px/1.5 ui-monospace, Consolas, monospace;
+}
+.debug-title { margin: 0 0 0.5rem; font-weight: bold; }
+.debug-row { white-space: pre-wrap; }
+.debug-bad { color: #ff8080; }
+.debug-alt.debug-bad { background: #7a0000; color: #fff; }
