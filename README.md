@@ -1,6 +1,8 @@
 # The House That Waited: companion site for *Hameward Bend* (working draft)
 
-Plain HTML, CSS and JavaScript. No build step, no framework, no third-party scripts or fonts. It's published at thehousethatwaited.au through GitHub Pages (GitHub manages the `CNAME` from the Pages settings; don't add or edit one here).
+Plain HTML, CSS and JavaScript. No build step, no framework, no third-party scripts or fonts. It's published at thehousethatwaited.au through GitHub Pages (GitHub manages the `CNAME` from the Pages settings; don't edit it here).
+
+Every page is **static HTML**: all the words are in the page itself, so it works with JavaScript switched off. `js/main.js` only adds extras (see below).
 
 **Not indexed yet.** Every page carries a `noindex` tag and `robots.txt` blocks all crawlers, because the site is live while unfinished. See "Launching" below.
 
@@ -8,25 +10,44 @@ Plain HTML, CSS and JavaScript. No build step, no framework, no third-party scri
 
 | To change… | Edit |
 |---|---|
-| Any words on the pages (headings, The Book's text, footer, door cards) | `js/content.js` |
-| Outstanding items for Julie (the amber `[ … ]` markers) | `markers` at the top of `js/content.js` |
+| Any words on a page | That page's `.html` file: `index.html` (Home), `the-book/index.html` (The Book) |
+| Outstanding items for Julie (the `[ … ]` markers) | HTML comments next to where each belongs; search the files for `[ ` |
 | Colours and fonts | Top of `css/styles.css`, section 1 "Design tokens" |
-| Page structure / section order | `index.html`, `the-book/index.html` |
-| Behaviour (filling the pages, debug tools) | `js/main.js` |
-| Navigation | `nav` in `js/content.js` (list only pages that exist) |
+| Optional behaviour (floating "Back to top", debug tools) | `js/main.js` |
 
-Pages are one folder each so the addresses are clean (`/the-book/`). Each page's `<html>` tag has a `data-root` attribute: `""` for the home page, `"../"` for a page one folder down. The script uses it to build links, so don't remove it.
+### The EDIT HERE comments
 
-Text in `js/content.js` can use `*asterisks*` for italics. The script never treats content as HTML.
+Each block of words in a page has a comment above it, like `<!-- EDIT HERE: welcome line -->`. Change the text directly below that comment and leave the tags (`<p>`, `<h2>` and so on) around it alone. Use `<em>…</em>` for italics.
+
+The header, nav and footer are written out in full in every file (there are no includes). If you change one, make the same change in every page. Only list pages that exist in the nav.
 
 The Book's text is Julie's own wording from `Hameward_Bend.docx`. The one deliberate change is "housethatwaited.au" written as "thehousethatwaited.au" (her real domain).
 
+### Open items for Julie
+
+| Marker | Where | What's needed |
+|---|---|---|
+| `[ hero photo — Julie to confirm an original ]` | Home, hero | A confirmed family photograph |
+| `[ book cover image — Julie to supply ]` | The Book, top right | The cover image |
+| `[ IngramSpark / buy link — Julie to supply ]` | The Book, "Where to buy" | The buy link (no button until then) |
+| `[ reader contact email — Julie to confirm ]` | Footer | Her public contact address (none shown until then) |
+| `[ TEMP — replace with Julie's own welcome ]` | Home, welcome line | Her own welcome words |
+
+The first two also show as amber blocks on the page.
+
 ## Adding a page
 
-1. Copy `the-book/index.html` to a new folder, e.g. `music/index.html`. Keep `data-root="../"`, the `noindex` tag and the three links in `<head>`.
-2. Set `data-page` on `<body>` and add a `meta` block for it in `js/content.js`. (`js/main.js` looks up the page's title and description from `data-page`; add a line for the new page where `pageMeta` is set.)
-3. Add the page to `nav` in `js/content.js`, and give the matching home-page door card a `path` (a door with no `path` shows as "In preparation" with no link).
-4. Put the page's words in `js/content.js` and mark them in the HTML with `data-content="…"`, `data-paragraphs="…"` or `data-list="…"`.
+1. Copy `the-book/index.html` to a new folder, e.g. `music/index.html`. Keep the `noindex` tag, the `../` paths, and the shared header and footer.
+2. Replace the content blocks, keeping the `EDIT HERE` comments.
+3. Add the page to the nav in **every** page's header, and give its door card on the Home page a link (a door with no link shows as "In preparation"; the comment above the doors explains how to switch one on).
+
+## The Book: moving around
+
+- **On this page** is a plain list of links to each section and part. Every part is always on the page; nothing is hidden behind tabs.
+- Each part heading has an `id` (`part-1` to `part-6`) that the jump links use. If you add a section or part, add its `id` and a line in the jump list.
+- Each major section ends with a **Back to top** link (works without JavaScript).
+- On wider screens (about 830px and up), `main.js` also shows a small floating "Top" button after the visitor scrolls. It stays hidden on narrow screens, where it would cover the text.
+- Smooth scrolling only switches on for visitors who haven't asked for reduced motion.
 
 ## Images
 
@@ -61,6 +82,6 @@ From this folder run `python -m http.server 8000`, then open `http://localhost:8
 
 - Semantic landmarks (header, nav, main, footer), one `h1` per page, sections labelled by their headings, and a skip link.
 - Text/background pairs meet WCAG AA contrast (lowest is about 6:1).
-- Keyboard focus is clearly outlined. Motion (a gentle hover change) only applies when the visitor hasn't asked for reduced motion.
+- Keyboard focus is clearly outlined. Motion only applies when the visitor hasn't asked for reduced motion.
 - Image placeholders have an accessible name ("Book cover to be added").
-- The pages fill their text from `js/content.js`, so they need JavaScript; without it, a short notice is shown.
+- The floating "Back to top" button has an accessible name ("Back to top of The Book") and can be reached by keyboard.
