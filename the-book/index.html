@@ -1,82 +1,171 @@
 <!DOCTYPE html>
-<html lang="en-AU" data-root="../">
+<html lang="en-AU">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
-  <!-- Fallback title/description; the real ones come from js/content.js -->
+  <!-- EDIT HERE: page title and description (shown in browser tabs and link previews) -->
   <title>The Book | The House That Waited</title>
   <meta name="description" content="An outline of Hameward Bend – A Family’s Journey Home, by Julie Tan.">
   <link rel="stylesheet" href="../css/styles.css">
-  <script src="../js/content.js" defer></script>
   <script src="../js/main.js" defer></script>
 </head>
-<body data-page="book">
-  <a class="skip-link" href="#main" data-content="site.skipLink">Skip to main content</a>
+<body id="top" data-page="book">
+  <a class="skip-link" href="#main">Skip to main content</a>
 
+  <!-- Shared header and nav: keep identical on every page. Only list pages that exist. -->
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" data-content="site.title" href="../">The House That Waited</a>
-      <nav class="site-nav" data-aria-label="site.navLabel" aria-label="Main">
-        <ul class="nav-list" data-list="nav"></ul>
+      <a class="brand" href="../">The House That Waited</a>
+      <nav class="site-nav" aria-label="Main">
+        <ul class="nav-list">
+          <li><a href="../">Home</a></li>
+          <li><a href="../the-book/" aria-current="page">The Book</a></li>
+        </ul>
       </nav>
     </div>
   </header>
 
   <main id="main" tabindex="-1">
-    <noscript>
-      <p class="noscript">This site needs JavaScript switched on to show its content.</p>
-    </noscript>
 
     <section class="book-head" aria-labelledby="book-title">
       <div class="container book-head-inner">
         <!-- DOM order = reading order: title block first, cover after -->
         <div class="book-head-text">
-          <h1 id="book-title" data-content="book.title"></h1>
-          <p class="byline" data-content="book.byline"></p>
-          <p class="kicker" data-content="book.kicker"></p>
+          <!-- EDIT HERE: title, byline and outline label (Julie's own wording; Patrick is checking the title and label with her) -->
+          <h1 id="book-title">Hameward Bend -A Family’s Journey Home</h1>
+          <p class="byline">By Julie Tan</p>
+          <p class="kicker">An Outline of the Book</p>
+          <!-- EDIT HERE: Burns epigraph -->
           <figure class="epigraph">
-            <blockquote><p data-content="book.epigraph.quote"></p></blockquote>
-            <figcaption data-content="book.epigraph.cite"></figcaption>
+            <blockquote><p>“And weary o’er the moor, his course does hameward bend.”</p></blockquote>
+            <figcaption>— Robert Burns, The Cotter’s Saturday Night</figcaption>
           </figure>
-          <p class="where-to-buy" data-content="bookPage.whereToBuy"></p>
+          <!-- EDIT HERE: where to buy -->
+          <!-- [ IngramSpark / buy link — Julie to supply ]  No buy button or retailer link until she supplies one. -->
+          <p class="where-to-buy">Where to buy: coming soon</p>
         </div>
 
-        <!-- Cover placeholder: swap for an <img> when Julie supplies a cover -->
+        <!-- EDIT HERE: book cover -->
+        <!-- [ book cover image — Julie to supply ]
+             When she does: replace the placeholder div below with
+             <img src="../assets/images/NAME.jpg" alt="describe the cover" width="600" height="900"> -->
         <figure class="book-cover">
-          <div class="cover-placeholder" role="img" data-aria-label="bookPage.coverAlt">
-            <span class="marker" data-content="markers.bookCover"></span>
+          <div class="cover-placeholder" role="img" aria-label="Book cover to be added">
+            <span class="marker">[ book cover image — Julie to supply ]</span>
           </div>
         </figure>
       </div>
     </section>
 
+    <!-- Jump links: plain anchors, no hidden content. Add a line here if you add a section or part. -->
+    <nav class="jump" aria-labelledby="jump-heading">
+      <div class="container">
+        <p class="jump-title" id="jump-heading">On this page</p>
+        <ul>
+          <li><a href="#story-heading">The Story</a></li>
+          <li><a href="#journey-heading">The Journey Through the Book</a>
+            <ul>
+              <li><a href="#part-1">1. The Beginnings — Nineteenth-Century Scotland</a></li>
+              <li><a href="#part-2">2. A House and Its People</a></li>
+              <li><a href="#part-3">3. War, Separation and Homecoming</a></li>
+              <li><a href="#part-4">4. The Generations Between</a></li>
+              <li><a href="#part-5">5. Remembering Armour Street</a></li>
+              <li><a href="#part-6">6. The Journey Home</a></li>
+            </ul>
+          </li>
+          <li><a href="#heart-heading">The Heart of the Book</a></li>
+          <li><a href="#beyond-heading">Beyond the Book</a></li>
+        </ul>
+      </div>
+    </nav>
+
     <div class="container reading">
+      <!-- EDIT HERE: The Story -->
       <section aria-labelledby="story-heading">
-        <h2 id="story-heading" data-content="book.story.heading"></h2>
-        <div data-paragraphs="book.story.paragraphs"></div>
+        <h2 id="story-heading">The Story</h2>
+        <div>
+          <p>At the heart of Hameward Bend stands a modest sandstone tenement at 15 Armour Street, Kilmarnock, Western Scotland.</p>
+          <p>For generations, this ordinary home sheltered a family whose lives were anything but ordinary. From the age of sailing ships to two world wars, from the industrial streets of Scotland to Newfoundland, India and Australia, their journeys took them far beyond the place they called home.</p>
+          <p>Yet Armour Street remained a constant presence: a place of beginnings and homecomings, of laughter, hardship, love and loss.</p>
+          <p>Drawing upon family stories passed down through generations, personal memories, letters, photographs, official records and historical research, Hameward Bend brings these people and their world to life.</p>
+        </div>
+        <p class="back-to-top"><a href="#top" aria-label="Back to top of The Book">Back to top</a></p>
       </section>
 
+      <!-- EDIT HERE: The Journey Through the Book (six parts; each heading has an id so the jump links land on it) -->
       <section aria-labelledby="journey-heading">
-        <h2 id="journey-heading" data-content="book.journey.heading"></h2>
-        <ol class="parts" data-list="book.journey.parts"></ol>
+        <h2 id="journey-heading">The Journey Through the Book</h2>
+        <ol class="parts">
+          <li class="part">
+            <h3 id="part-1"><span class="part-number">1.</span> The Beginnings — Nineteenth-Century Scotland</h3>
+            <p>The story reaches back to the nineteenth century, introducing the Merrilees, Glass, Knoud and Muir families.</p>
+            <p>Among them is Peter Merrilees, a fatherless boy born in North Berwick who goes to sea and rises to become a ship's officer. His travels carry him across the oceans, on the old trading routes between Scotland and the Antipodes. While other branches of the family establish their lives amid the working communities of Glasgow and Ayrshire.</p>
+            <p>Gradually, the family histories converge upon Armour Street.</p>
+          </li>
+          <li class="part">
+            <h3 id="part-2"><span class="part-number">2.</span> A House and Its People</h3>
+            <p>The rooms, stairs, scullery and wash house of 15 Armour Street reveal the rhythms of everyday life.</p>
+            <p>Here are the women who held families together, the men who worked long hours, the children who grew up surrounded by neighbours and relatives, and the small domestic rituals that made a house a home.</p>
+            <p>These chapters preserve a way of life that has largely disappeared, with its distinctive Scots language, customs, humour and sense of community.</p>
+          </li>
+          <li class="part">
+            <h3 id="part-3"><span class="part-number">3.</span> War, Separation and Homecoming</h3>
+            <p>The two world wars reach deeply into the family's lives.</p>
+            <p>Men leave for military service, families wait for news, and the consequences of conflict are felt long after the fighting ends.</p>
+            <p>Alongside loss and uncertainty are stories of endurance, friendship, courtship and the beginnings of new lives.</p>
+          </li>
+          <li class="part">
+            <h3 id="part-4"><span class="part-number">4.</span> The Generations Between</h3>
+            <p>As the twentieth century unfolds, the family changes with it.</p>
+            <p>The book follows the lives and relationships of parents, grandparents and relatives whose stories were familiar around the family table long before their historical significance became clear.</p>
+            <p>Work, marriage, migration and the changing world reshape the family, while inherited traditions and memories continue to connect one generation with another.</p>
+          </li>
+          <li class="part">
+            <h3 id="part-5"><span class="part-number">5.</span> Remembering Armour Street</h3>
+            <p>Interwoven with the family history are the author's own childhood recollections of Kilmarnock.</p>
+            <p>The scullery, the wash house, the streets and shops, familiar voices, family celebrations and everyday moments offer a child's view of the world that earlier generations helped create.</p>
+            <p>These memories give the reader a sense of the people behind the names and dates.</p>
+          </li>
+          <li class="part">
+            <h3 id="part-6"><span class="part-number">6.</span> The Journey Home</h3>
+            <p>In later generations, the family's story returns to Australia.</p>
+            <p>As the author begins to explore the documents, photographs and recollections left behind, the past takes on new meaning. Questions emerge, discoveries are made, and people once known only through family stories become vivid individuals with lives of their own.</p>
+            <p>The journey home becomes more than a return to a physical place. It is a journey towards understanding where we come from and what we carry forward.</p>
+          </li>
+        </ol>
+        <p class="back-to-top"><a href="#top" aria-label="Back to top of The Book">Back to top</a></p>
       </section>
 
+      <!-- EDIT HERE: The Heart of the Book -->
       <section aria-labelledby="heart-heading">
-        <h2 id="heart-heading" data-content="book.heart.heading"></h2>
-        <div data-paragraphs="book.heart.paragraphs"></div>
+        <h2 id="heart-heading">The Heart of the Book</h2>
+        <div>
+          <p>Hameward Bend is not a history of famous people or great events, although great events repeatedly touch the lives of its characters.</p>
+          <p>It is the history of an ordinary family, told with the conviction that ordinary lives are worthy of remembrance.</p>
+          <p>At its heart is the belief that, despite separation, hardship, war and loss, love is the legacy that one generation can pass to the next.</p>
+          <p>The house in Armour Street provides the setting, but the family — its stories, relationships and enduring connections — is the heart of the book.</p>
+        </div>
+        <p class="back-to-top"><a href="#top" aria-label="Back to top of The Book">Back to top</a></p>
       </section>
 
+      <!-- EDIT HERE: Beyond the Book (her text says housethatwaited.au; written here as her real domain, thehousethatwaited.au) -->
       <section aria-labelledby="beyond-heading">
-        <h2 id="beyond-heading" data-content="book.beyond.heading"></h2>
-        <div data-paragraphs="book.beyond.paragraphs"></div>
+        <h2 id="beyond-heading">Beyond the Book</h2>
+        <div>
+          <p>The companion website, thehousethatwaited.au, will extend the story through original photographs, historical documents, family trees, maps, personal recollections and discoveries that could not all be accommodated within the printed pages.</p>
+          <p>It will offer readers the opportunity to explore the people, places and history behind Hameward Bend, while allowing the family archive to continue growing for future generations.</p>
+        </div>
+        <p class="back-to-top"><a href="#top" aria-label="Back to top of The Book">Back to top</a></p>
       </section>
     </div>
   </main>
 
+  <!-- Shared footer: keep identical on every page. -->
+  <!-- [ reader contact email — Julie to confirm ]  (no email in the footer until she decides) -->
   <footer class="site-footer">
     <div class="container">
-      <p data-content="site.footer"></p>
+      <p>A companion to <em>Hameward Bend – A Family’s Journey Home</em> by Julie Tan</p>
     </div>
   </footer>
 </body>

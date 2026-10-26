@@ -36,7 +36,10 @@
 
 *, *::before, *::after { box-sizing: border-box; }
 
-html { -webkit-text-size-adjust: 100%; }
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-padding-top: 1.5rem; /* headings land with space above them after a jump */
+}
 
 body {
   margin: 0;
@@ -87,12 +90,6 @@ a { color: var(--color-link); text-underline-offset: 0.2em; }
   color: var(--color-bg);
 }
 .skip-link:focus { top: 0.5rem; }
-
-.noscript {
-  max-width: var(--width-reading);
-  margin: 2rem auto;
-  padding: 0 var(--gutter);
-}
 
 /* Amber placeholder markers */
 .marker {
@@ -280,6 +277,45 @@ a { color: var(--color-link); text-underline-offset: 0.2em; }
 .part h3 { font-size: 1.2rem; }
 .part-number { margin-right: 0.15em; color: var(--color-text-muted); }
 
+/* Jump links ("On this page") */
+.jump { padding: 0 0 0.5rem; }
+.jump .container {
+  max-width: calc(var(--width-reading) + 2 * var(--gutter));
+}
+.jump-title {
+  margin: 0 0 0.4rem;
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.jump ul { margin: 0; padding-left: 1.1rem; }
+.jump > .container > ul { padding: 0.9rem 1.25rem; background: var(--color-surface); border: 1px solid var(--color-line); list-style: none; }
+.jump ul ul { margin: 0.2rem 0 0.4rem; list-style: none; padding-left: 1rem; }
+.jump li { margin: 0; }
+.jump a { display: inline-block; padding: 0.2rem 0; font-size: 1rem; }
+
+/* "Back to top" links at the end of each section */
+.back-to-top { margin: 1.25rem 0 0; font-size: 0.95rem; text-align: right; }
+.back-to-top a { color: var(--color-text-muted); }
+
+/* Floating "Back to top" button (added by main.js). Wide screens only: on a
+   narrow screen it would cover the text, so the section links do the job. */
+.to-top-float {
+  display: none;
+  position: fixed;
+  right: 1rem;
+  bottom: 1.25rem;
+  z-index: 5;
+  padding: 0.5rem 0.8rem;
+  background: var(--color-surface);
+  color: var(--color-text);
+  border: 1px solid var(--color-text-muted);
+  font-size: 0.95rem;
+  text-decoration: none;
+}
+.to-top-float:hover { background: var(--color-surface-alt); }
+
 /* ==========================================================================
    6. WIDER SCREENS
    ========================================================================== */
@@ -293,6 +329,11 @@ a { color: var(--color-link); text-underline-offset: 0.2em; }
   .book-head-inner { grid-template-columns: 1fr 14rem; align-items: start; gap: 3rem; }
 }
 
+/* Wide enough that the reading column leaves clear margins either side */
+@media (min-width: 52rem) {
+  .to-top-float:not([hidden]) { display: block; }
+}
+
 @media (min-width: 64rem) {
   .door-grid { grid-template-columns: repeat(4, 1fr); }
 }
@@ -302,6 +343,7 @@ a { color: var(--color-link); text-underline-offset: 0.2em; }
    ========================================================================== */
 
 @media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
   .door { transition: border-color 0.2s ease; }
   .nav-list a { transition: border-color 0.2s ease; }
 }

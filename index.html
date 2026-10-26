@@ -1,49 +1,57 @@
 <!DOCTYPE html>
-<html lang="en-AU" data-root="">
+<html lang="en-AU">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
-  <!-- Fallback title/description; the real ones come from js/content.js -->
+  <!-- EDIT HERE: page title and description (shown in browser tabs and link previews) -->
   <title>The House That Waited</title>
   <meta name="description" content="A companion website for Hameward Bend – A Family’s Journey Home.">
   <link rel="stylesheet" href="css/styles.css">
-  <script src="js/content.js" defer></script>
   <script src="js/main.js" defer></script>
 </head>
-<body data-page="home">
-  <a class="skip-link" href="#main" data-content="site.skipLink">Skip to main content</a>
+<body id="top" data-page="home">
+  <a class="skip-link" href="#main">Skip to main content</a>
 
+  <!-- Shared header and nav: keep identical on every page. Only list pages that exist. -->
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" data-content="site.title" href="./">The House That Waited</a>
-      <nav class="site-nav" data-aria-label="site.navLabel" aria-label="Main">
-        <ul class="nav-list" data-list="nav"></ul>
+      <a class="brand" href="./">The House That Waited</a>
+      <nav class="site-nav" aria-label="Main">
+        <ul class="nav-list">
+          <li><a href="./" aria-current="page">Home</a></li>
+          <li><a href="the-book/">The Book</a></li>
+        </ul>
       </nav>
     </div>
   </header>
 
   <main id="main" tabindex="-1">
-    <noscript>
-      <p class="noscript">This site needs JavaScript switched on to show its content.</p>
-    </noscript>
 
     <section class="hero" aria-labelledby="hero-heading">
       <div class="container hero-inner">
         <div class="hero-text">
-          <h1 id="hero-heading" data-content="site.title"></h1>
-          <p class="hero-subtitle" data-content="home.hero.subtitle"></p>
+          <h1 id="hero-heading">The House That Waited</h1>
+          <!-- EDIT HERE: subtitle -->
+          <p class="hero-subtitle">The companion archive to <em>Hameward Bend – A Family’s Journey Home</em></p>
+          <!-- EDIT HERE: Burns epigraph -->
           <figure class="epigraph">
-            <blockquote><p data-content="home.hero.epigraph.quote"></p></blockquote>
-            <figcaption>&mdash; <span data-content="home.hero.epigraph.cite"></span></figcaption>
+            <blockquote><p>And weary o’er the moor, his course does hameward bend.</p></blockquote>
+            <figcaption>&mdash; Robert Burns, <em>The Cotter’s Saturday Night</em></figcaption>
           </figure>
-          <p class="welcome" data-content="home.hero.welcome"></p>
+          <!-- EDIT HERE: welcome line -->
+          <!-- [ TEMP — replace with Julie's own welcome ]  The line below is verbatim from Julie's outline, as a stand-in. -->
+          <p class="welcome">It is the history of an ordinary family, told with the conviction that ordinary lives are worthy of remembrance.</p>
         </div>
 
-        <!-- Photo-frame placeholder: swap for an <img> inside .photo-frame when Julie confirms an original -->
+        <!-- EDIT HERE: hero photograph -->
+        <!-- [ hero photo — Julie to confirm an original ]
+             When she confirms one: replace the placeholder div below with
+             <img src="assets/images/NAME.jpg" alt="describe what is visible" width="1600" height="1200">
+             inside the same <figure>. -->
         <figure class="hero-photo">
-          <div class="photo-frame" role="img" data-aria-label="home.hero.photoAlt">
-            <span class="marker" data-content="markers.heroPhoto"></span>
+          <div class="photo-frame" role="img" aria-label="A family photograph will be added here">
+            <span class="marker">[ hero photo — Julie to confirm an original ]</span>
           </div>
         </figure>
       </div>
@@ -51,15 +59,37 @@
 
     <section class="doors" aria-labelledby="doors-heading">
       <div class="container">
-        <h2 id="doors-heading" data-content="home.doors.heading"></h2>
-        <ul class="door-grid" data-list="home.doors.items"></ul>
+        <h2 id="doors-heading">Explore</h2>
+        <!-- EDIT HERE: the four doors. A live door is a link; a door still being prepared has no link at all.
+             To switch one on later: replace its <h3> text with <a href="NEW-PAGE/">Title</a>, change the class to
+             "door door-live", and change the status text. -->
+        <ul class="door-grid">
+          <li class="door door-live">
+            <h3><a href="the-book/">The Book</a></h3>
+            <p class="door-status">Available now</p>
+          </li>
+          <li class="door door-soon">
+            <h3>Research Journey</h3>
+            <p class="door-status">In preparation</p>
+          </li>
+          <li class="door door-soon">
+            <h3>Music</h3>
+            <p class="door-status">In preparation</p>
+          </li>
+          <li class="door door-soon">
+            <h3>From the Scullery</h3>
+            <p class="door-status">In preparation</p>
+          </li>
+        </ul>
       </div>
     </section>
   </main>
 
+  <!-- Shared footer: keep identical on every page. -->
+  <!-- [ reader contact email — Julie to confirm ]  (no email in the footer until she decides) -->
   <footer class="site-footer">
     <div class="container">
-      <p data-content="site.footer"></p>
+      <p>A companion to <em>Hameward Bend – A Family’s Journey Home</em> by Julie Tan</p>
     </div>
   </footer>
 </body>
