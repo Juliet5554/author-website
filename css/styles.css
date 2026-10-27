@@ -18,6 +18,7 @@
   --color-heading: #1f2a44;
   --color-link: #1f2a44;
   --color-line: #cdbf9f;         /* borders and dividers */
+  --color-rule: #b9a984;         /* fine rule between major sections: muted sepia */
   --color-photo: #e2d6bd;        /* inside the photo frame */
   --color-corner: #3a2e24;       /* photo corners */
   --color-focus: #8a3b12;        /* keyboard focus ring */
@@ -51,6 +52,7 @@ body {
 }
 
 h1, h2, h3 {
+  text-wrap: balance; /* even line lengths; ignored by older browsers */
   font-family: var(--font-display);
   color: var(--color-heading);
   font-weight: normal;
@@ -150,6 +152,8 @@ a { color: var(--color-link); text-underline-offset: 0.2em; }
   font-size: 1rem;
 }
 .site-footer p { margin: 0; }
+.site-footer p + p { margin-top: 0.4rem; }
+.site-footer a { overflow-wrap: anywhere; }
 
 /* ==========================================================================
    4. HOME
@@ -160,6 +164,7 @@ a { color: var(--color-link); text-underline-offset: 0.2em; }
 .hero-inner { display: grid; gap: 2.5rem; }
 
 .hero-subtitle {
+  text-wrap: balance;
   font-size: 1.25rem;
   font-style: italic;
   color: var(--color-text-muted);
@@ -199,6 +204,13 @@ a { color: var(--color-link); text-underline-offset: 0.2em; }
 .photo-frame::before { top: 0; left: 0; clip-path: polygon(0 0, 100% 0, 0 100%); }
 .photo-frame::after { bottom: 0; right: 0; clip-path: polygon(100% 0, 100% 100%, 0 100%); }
 
+.house { padding: 0 0 4rem; }
+.house-body {
+  max-width: var(--width-reading);
+  padding-top: 3.5rem;
+  border-top: 1px solid var(--color-rule);
+}
+
 .doors {
   padding: 2.5rem 0 3rem;
   background: var(--color-surface-alt);
@@ -236,14 +248,6 @@ a { color: var(--color-link); text-underline-offset: 0.2em; }
 .book-head { padding: 2.5rem 0 1.5rem; }
 .book-head-inner { display: grid; gap: 2rem; }
 
-.kicker {
-  margin-bottom: 0.5rem;
-  color: var(--color-text-muted);
-  font-size: 0.95rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
 .byline { font-size: 1.2rem; color: var(--color-text-muted); }
 .where-to-buy { margin-bottom: 0; color: var(--color-text-muted); }
 
@@ -262,6 +266,10 @@ a { color: var(--color-link); text-underline-offset: 0.2em; }
 
 .reading { max-width: calc(var(--width-reading) + 2 * var(--gutter)); }
 .reading section { margin-top: 2.5rem; }
+.reading section + section {
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--color-rule);
+}
 
 .parts {
   margin: 0;
@@ -319,6 +327,11 @@ a { color: var(--color-link); text-underline-offset: 0.2em; }
 /* ==========================================================================
    6. WIDER SCREENS
    ========================================================================== */
+
+/* Very narrow phones: keep the long book title to three tidy lines */
+@media (max-width: 24rem) {
+  h1 { font-size: 2rem; }
+}
 
 @media (min-width: 48rem) {
   :root { --gutter: 2rem; }
