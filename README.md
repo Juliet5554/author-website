@@ -19,7 +19,7 @@ Every page is **static HTML**: all the words are in the page itself, so it works
 
 Each block of words in a page has a comment above it, like `<!-- EDIT HERE: welcome line -->`. Change the text directly below that comment and leave the tags (`<p>`, `<h2>` and so on) around it alone. Use `<em>…</em>` for italics.
 
-The header, nav and footer are written out in full in every file (there are no includes). If you change one, make the same change in every page. Only list pages that exist in the nav.
+The header, nav and footer are written out in full in every file (there are no includes). If you change one, make the same change in every page. Only list pages that exist in the nav. The footer carries the reader contact address as a `mailto:` link.
 
 The Book's text is Julie's own wording from `Hameward_Bend.docx`. The one deliberate change is "housethatwaited.au" written as "thehousethatwaited.au" (her real domain).
 
@@ -30,7 +30,7 @@ The Book's text is Julie's own wording from `Hameward_Bend.docx`. The one delibe
 | `[ hero photo — Julie to confirm an original ]` | Home, hero | A confirmed family photograph |
 | `[ book cover image — Julie to supply ]` | The Book, top right | The cover image |
 | `[ IngramSpark / buy link — Julie to supply ]` | The Book, "Where to buy" | The buy link (no button until then) |
-| `[ reader contact email — Julie to confirm ]` | Footer | Her public contact address (none shown until then) |
+| `[ footer wording — Julie to confirm ]` | Footer (both pages) | Her OK on the footer's "Memories and corrections are welcome" line and the reader contact address |
 | `[ TEMP — replace with Julie's own welcome ]` | Home, welcome line | Her own welcome words |
 
 The first two also show as amber blocks on the page.
