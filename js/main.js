@@ -1,7 +1,7 @@
 /* ==========================================================================
    main.js: optional extras only. Every page is complete without it.
    Words live in the HTML files (look for "EDIT HERE" comments).
-     1. Floating "Back to top" button on The Book (wide screens only)
+     1. Floating "Back to top" button on The Book and From the Scullery (wide screens only)
      2. Developer QA tools: ?debug=alt and ?debug=headings
    ========================================================================== */
 
@@ -24,7 +24,8 @@
   if (document.querySelector(".back-to-top")) {
     var toTop = el("a", "to-top-float");
     toTop.href = "#top";
-    toTop.setAttribute("aria-label", "Back to top of The Book");
+    /* same accessible name as the page's own "Back to top" link, e.g. "Back to top of The Book" */
+    toTop.setAttribute("aria-label", document.querySelector(".back-to-top a").getAttribute("aria-label") || "Back to top");
     toTop.textContent = "↑ Top";
     toTop.hidden = true;
     document.body.appendChild(toTop);

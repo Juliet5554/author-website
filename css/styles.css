@@ -285,23 +285,75 @@ a { color: var(--color-link); text-underline-offset: 0.2em; }
 .part h3 { font-size: 1.2rem; }
 .part-number { margin-right: 0.15em; color: var(--color-text-muted); }
 
-/* Jump links ("On this page") */
+/* Jump links ("On this page"): a small heading and one quiet, wrapping row of links (no box) */
 .jump { padding: 0 0 0.5rem; }
 .jump .container {
   max-width: calc(var(--width-reading) + 2 * var(--gutter));
 }
 .jump-title {
-  margin: 0 0 0.4rem;
+  margin: 0 0 0.2rem;
   color: var(--color-text-muted);
-  font-size: 0.95rem;
+  font-size: 0.8rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
-.jump ul { margin: 0; padding-left: 1.1rem; }
-.jump > .container > ul { padding: 0.9rem 1.25rem; background: var(--color-surface); border: 1px solid var(--color-line); list-style: none; }
-.jump ul ul { margin: 0.2rem 0 0.4rem; list-style: none; padding-left: 1rem; }
-.jump li { margin: 0; }
-.jump a { display: inline-block; padding: 0.2rem 0; font-size: 1rem; }
+.jump ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.jump li { margin: 0; font-size: 0.95rem; }
+.jump a { display: inline-block; padding: 0.25rem 0; }
+/* Separator is generated, with empty alt text so screen readers skip it */
+.jump li:not(:last-child)::after {
+  content: "·";
+  content: "·" / "";
+  margin: 0 0.6em;
+  color: var(--color-text-muted);
+}
+
+/* ==========================================================================
+   5b. FROM THE SCULLERY: a quiet, typeset chapter (whitespace, no rules or cards)
+   ========================================================================== */
+
+.chapter-head { padding: 2.5rem 0 1rem; }
+.chapter { max-width: calc(var(--width-reading) + 2 * var(--gutter)); }
+.chapter-head h1 { margin-bottom: 0; }
+
+.scullery-text { padding-top: 1.5rem; }
+.scullery-text p { margin-bottom: 1.1em; line-height: 1.7; }
+.scullery-text .intro { margin-bottom: 1rem; }
+
+.dish { margin-top: 4rem; }
+.dish h2 { margin-bottom: 0.8rem; font-size: 1.5rem; }
+
+/* "Ingredients and method" / "Method": a small label, not a heading */
+.scullery-text .recipe-label {
+  margin: 1.6rem 0 0.4rem;
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  font-variant: small-caps;
+  letter-spacing: 0.08em;
+}
+
+.scullery-text .closing {
+  margin-top: 4.5rem;
+  margin-bottom: 0;
+  font-style: italic;
+  font-size: 1.2rem;
+}
+
+.chapter-end {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5rem 1.5rem;
+  margin-top: 2.5rem;
+}
+.chapter-end p { margin: 0; font-size: 0.95rem; }
+.chapter-end a { color: var(--color-text-muted); }
 
 /* "Back to top" links at the end of each section */
 .back-to-top { margin: 1.25rem 0 0; font-size: 0.95rem; text-align: right; }
