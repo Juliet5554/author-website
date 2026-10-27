@@ -10,7 +10,7 @@ Every page is **static HTML**: all the words are in the page itself, so it works
 
 | To change… | Edit |
 |---|---|
-| Any words on a page | That page's `.html` file: `index.html` (Home), `the-book/index.html` (The Book) |
+| Any words on a page | That page's `.html` file: `index.html` (Home), `the-book/index.html` (The Book), `from-the-scullery/index.html` (From the Scullery) |
 | Outstanding items for Julie (the `[ … ]` markers) | HTML comments next to where each belongs; search the files for `[ ` |
 | Colours and fonts | Top of `css/styles.css`, section 1 "Design tokens" |
 | Optional behaviour (floating "Back to top", debug tools) | `js/main.js` |
@@ -23,6 +23,8 @@ The header, nav and footer are written out in full in every file (there are no i
 
 The Book's text is Julie's own wording from `Hameward_Bend.docx`. The one deliberate change is "housethatwaited.au" written as "thehousethatwaited.au" (her real domain).
 
+From the Scullery's text is Julie's own wording from `These_are_the_family_recipes_I_remember.docx`, unchanged (her spelling, punctuation and apostrophes included). Its `EDIT HERE` blocks are: the page title and description, the introduction, one block per dish (heading, paragraphs and method, so each dish can be edited on its own), and the closing line. The only wording that isn't Julie's is the page's meta description and the "On this page", "Back to the book" and "Back to top" link labels.
+
 ### Open items for Julie
 
 | Marker | Where | What's needed |
@@ -30,23 +32,27 @@ The Book's text is Julie's own wording from `Hameward_Bend.docx`. The one delibe
 | `[ hero photo — Julie to confirm an original ]` | Home, hero | A confirmed family photograph |
 | `[ book cover image — Julie to supply ]` | The Book, top right | The cover image |
 | `[ IngramSpark / buy link — Julie to supply ]` | The Book, "Where to buy" | The buy link (no button until then) |
-| `[ footer wording — Julie to confirm ]` | Footer (both pages) | Her OK on the footer's "Memories and corrections are welcome" line and the reader contact address |
+| `[ footer wording — Julie to confirm ]` | Footer (every page) | Her OK on the footer's "Memories and corrections are welcome" line and the reader contact address |
 | `[ TEMP — replace with Julie's own welcome ]` | Home, welcome line | Her own welcome words |
+| `[ Scullery photographs — … ]` | From the Scullery, after the introduction | Julie is waiting on permission from her children. Then the layout (a loose pile of photographs, some partly visible) still has to be designed. Nothing shows on the page until then |
+| `[ knitting / "Threads from the past" — … ]` | From the Scullery, end of the page | Julie to send material; whether it gets its own page or sits inside this one is still to be decided |
+| Burns epigraph | Home only | Not an open item: Julie asked for the quotation to live on Home only ("where it has real significance"). A comment on The Book marks where it was removed |
 
-The first two also show as amber blocks on the page.
+The first two also show as amber blocks on the page. The two Scullery markers are comments only; nothing shows on the page.
 
 ## Adding a page
 
-1. Copy `the-book/index.html` to a new folder, e.g. `music/index.html`. Keep the `noindex` tag, the `../` paths, and the shared header and footer.
+1. Copy `the-book/index.html` (or `from-the-scullery/index.html`) to a new folder, e.g. `music/index.html`. Keep the `noindex` tag, the `../` paths, and the shared header and footer.
 2. Replace the content blocks, keeping the `EDIT HERE` comments.
-3. Add the page to the nav in **every** page's header, and give its door card on the Home page a link (a door with no link shows as "In preparation"; the comment above the doors explains how to switch one on).
+3. Add the page to the nav in **every** page's header (the nav is currently Home, The Book, From the Scullery; on very narrow phones it wraps onto a second line, and there is no JavaScript menu), and give its door card on the Home page a link (a door with no link shows as "In preparation"; the comment above the doors explains how to switch one on).
 
-## The Book: moving around
+## Moving around: The Book and From the Scullery
 
-- **On this page** is a plain list of links to each section and part. Every part is always on the page; nothing is hidden behind tabs.
-- Each part heading has an `id` (`part-1` to `part-6`) that the jump links use. If you add a section or part, add its `id` and a line in the jump list.
-- Each major section ends with a **Back to top** link (works without JavaScript).
-- On wider screens (about 830px and up), `main.js` also shows a small floating "Top" button after the visitor scrolls. It stays hidden on narrow screens, where it would cover the text.
+- **On this page** is a small heading with one quiet row of links (no box). On The Book it lists the four sections; on From the Scullery it lists the 17 dishes. Everything is always on the page; nothing is hidden behind tabs.
+- The Book's six part headings keep their `id`s (`part-1` to `part-6`) although the part links are no longer shown, so they can come back later. If you add a section, add its `id` and a line in the jump row. On From the Scullery, give each new dish heading an `id` and add it to the row.
+- The Book: each major section ends with a **Back to top** link (works without JavaScript). From the Scullery: one **Back to top** link and one **Back to the book** link after the closing line, and no per-dish links.
+- On wider screens (about 830px and up), `main.js` also shows a small floating "Top" button after the visitor scrolls. It stays hidden on narrow screens, where it would cover the text. Its accessible name is copied from the page's own "Back to top" link.
+- On From the Scullery, "Ingredients and method" and "Method" are small labels, not headings, so the heading outline is just the title and the 17 dishes.
 - Smooth scrolling only switches on for visitors who haven't asked for reduced motion.
 
 ## Images
