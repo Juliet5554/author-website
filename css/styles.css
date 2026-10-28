@@ -252,16 +252,11 @@ a { color: var(--color-link); text-underline-offset: 0.2em; }
 .where-to-buy { margin-bottom: 0; color: var(--color-text-muted); }
 
 .book-cover { margin: 0; }
-.cover-placeholder {
-  display: grid;
-  place-items: center;
+.book-cover img {
+  display: block;
   width: 100%;
-  max-width: 14rem;
-  aspect-ratio: 2 / 3;
-  padding: 1rem;
-  text-align: center;
-  background: var(--color-photo);
-  border: 2px dashed var(--color-text-muted);
+  max-width: 16rem;
+  height: auto;
 }
 
 .reading { max-width: calc(var(--width-reading) + 2 * var(--gutter)); }

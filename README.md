@@ -30,7 +30,6 @@ From the Scullery's text is Julie's own wording from `These_are_the_family_recip
 | Marker | Where | What's needed |
 |---|---|---|
 | `[ hero photo — Julie to confirm an original ]` | Home, hero | A confirmed family photograph |
-| `[ book cover image — Julie to supply ]` | The Book, top right | The cover image |
 | `[ IngramSpark / buy link — Julie to supply ]` | The Book, "Where to buy" | The buy link (no button until then) |
 | `[ footer wording — Julie to confirm ]` | Footer (every page) | Her OK on the footer's "Memories and corrections are welcome" line and the reader contact address |
 | `[ TEMP — replace with Julie's own welcome ]` | Home, welcome line | Her own welcome words |
@@ -38,7 +37,7 @@ From the Scullery's text is Julie's own wording from `These_are_the_family_recip
 | `[ knitting / "Threads from the past" — … ]` | From the Scullery, end of the page | Julie to send material; whether it gets its own page or sits inside this one is still to be decided |
 | Burns epigraph | Home only | Not an open item: Julie asked for the quotation to live on Home only ("where it has real significance"). A comment on The Book marks where it was removed |
 
-The first two also show as amber blocks on the page. The two Scullery markers are comments only; nothing shows on the page.
+The hero photo marker also shows as an amber block on the page. The two Scullery markers are comments only; nothing shows on the page.
 
 ## Adding a page
 
@@ -58,6 +57,8 @@ The first two also show as amber blocks on the page. The two Scullery markers ar
 ## Images
 
 Copy only what a page uses into `assets/images/`, with a descriptive lowercase-hyphenated name (e.g. `armour-street-tenement-1950s.jpg`), resized to about 1600px on the long edge. Write real alt text. Julie's originals stay where they are, untouched.
+
+The Book: front cover supplied by Julie (27 Oct 2026). Her wraparound cover is an unused alternative idea; its barcode and back-cover text stay off the site.
 
 ## Launching (removing noindex)
 
@@ -89,5 +90,5 @@ From this folder run `python -m http.server 8000`, then open `http://localhost:8
 - Semantic landmarks (header, nav, main, footer), one `h1` per page, sections labelled by their headings, and a skip link.
 - Text/background pairs meet WCAG AA contrast (lowest is about 6:1).
 - Keyboard focus is clearly outlined. Motion only applies when the visitor hasn't asked for reduced motion.
-- Image placeholders have an accessible name ("Book cover to be added").
+- Image placeholders have an accessible name ("A family photograph will be added here"). The book cover image has descriptive alt text.
 - The floating "Back to top" button has an accessible name ("Back to top of The Book") and can be reached by keyboard.
