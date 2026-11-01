@@ -33,6 +33,7 @@ The photographs on From the Scullery have alt text but deliberately no visible c
 |---|---|---|
 | `[ Julie to say whether this stays ]` | Home, hero (HTML comment) | Her mock-up leaves out the sentence "It is the history of an ordinary family, told with the conviction that ordinary lives are worthy of remembrance." It is kept in a comment, not shown, until she says whether it stays |
 | `[ IngramSpark / buy link — Julie to supply ]` | The Book, "Where to buy" | The buy link (no button until then) |
+| `[ Julie to confirm this is the final cover ]` | The Book, cover (HTML comment) | Her OK that the IngramSpark front panel is the final cover |
 | `[ footer wording — Julie to confirm ]` | Footer (every page) | Her OK on the footer's "Memories and corrections are welcome" line and the reader contact address |
 | `[ knitting / "Threads from the past" — … ]` | From the Scullery, end of the page | Julie to send material; whether it gets its own page or sits inside this one is still to be decided |
 | Burns epigraph | Home only | Not an open item: Julie asked for the quotation to live on Home only ("where it has real significance"). A comment on The Book marks where it was removed |
@@ -62,7 +63,7 @@ Home: `assets/images/keepsake-box-hero.jpg` (1600x1200), the keepsake box photo 
 
 From the Scullery: `assets/images/scullery/` holds 17 photographs (`kitchen-two-men-cooking.jpg`, `kitchen-child-in-apron.jpg`, `high-chair-toddler-with-bowl.jpg`, `girl-in-red-jacket-outdoors.jpg`, `boy-eating-roll-old-print.jpg`, `mince-and-potatoes-bowl.jpg`, `shortbread-fingers.jpg`, `empire-biscuits-1.jpg` to `empire-biscuits-5.jpg`, `kitchen-woman-and-two-girls-baking.jpg`, `clootie-dumpling-on-paper.jpg`, `halloween-cupcakes-girl-with-sweets.jpg`, `girl-with-hot-chocolate.jpg`, `dad-fishing-on-rocks.jpg`). These web copies are metadata-stripped (no GPS or camera data) and 1000px on the long edge (the five biscuit strips are 1200px wide). Keep it that way for any photo added later: family photos often carry GPS coordinates.
 
-The Book: front cover supplied by Julie (27 Oct 2026). Her wraparound cover is an unused alternative idea; its barcode and back-cover text stay off the site.
+The Book: the front cover (`hameward-bend-front-cover-252.jpg`, 900x1350, 2:3) is the front panel of Julie's IngramSpark PDF `Hameward_Cover_252.pdf`, supplied 31 Oct 2026. It is in use; Julie is to confirm it is final. The back cover, spine and barcode stay off the site. The earlier keepsake-box cover has been removed.
 
 ## Launching (removing noindex)
 
