@@ -148,7 +148,7 @@ a { color: var(--color-link); text-underline-offset: 0.2em; }
 
 .hero { padding: 2.5rem 0 3rem; }
 
-.hero-inner { display: grid; gap: 2.5rem; }
+.hero-inner { display: grid; gap: 1.75rem; }
 
 .hero-subtitle {
   text-wrap: balance;
@@ -162,7 +162,8 @@ a { color: var(--color-link); text-underline-offset: 0.2em; }
 .epigraph p { margin: 0 0 0.35rem; font-style: italic; font-size: 1.2rem; }
 .epigraph figcaption { color: var(--color-text-muted); font-size: 1rem; }
 
-.welcome { max-width: 32rem; }
+/* Set well apart from the quotation above; no bottom margin so it sits near the divider below */
+.welcome { max-width: 32rem; margin: 3rem 0 0; }
 
 /* Photo frame: parchment mat, photo corners */
 .hero-photo { margin: 0; }
@@ -341,6 +342,18 @@ a { color: var(--color-link); text-underline-offset: 0.2em; }
 .chapter-end p { margin: 0; font-size: 0.95rem; }
 .chapter-end a { color: var(--color-text-muted); }
 
+/* "Related:" line: one quiet line before the Back links */
+.related {
+  margin: 3rem 0 0;
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+}
+.related a { color: var(--color-text-muted); }
+.chapter-wide .related { max-width: var(--width-reading); }
+@media (min-width: 48rem) {
+  .chapter-wide .related { margin-left: auto; margin-right: auto; }
+}
+
 /* "Back to top" links at the end of each section */
 .back-to-top { margin: 1.25rem 0 0; font-size: 0.95rem; text-align: right; }
 .back-to-top a { color: var(--color-text-muted); }
@@ -472,8 +485,121 @@ a { color: var(--color-link); text-underline-offset: 0.2em; }
 }
 
 /* ==========================================================================
+   5d. A THREAD THROUGH THE GENERATIONS: one column of reading text, with
+       photographs on alternating sides. Every photograph sits in the same
+       parchment frame as the Home photo and is never cropped: the picture
+       sets the frame's shape, portrait or landscape.
+   ========================================================================== */
+
+.thread-text { padding-top: 1.5rem; }
+.thread-text .lead { margin-bottom: 0; font-size: 1.25rem; font-style: italic; }
+.thread-text p { line-height: 1.7; }
+
+.thread-section { margin-top: 4rem; }
+.thread-section h2 { margin-bottom: 0.8rem; font-size: 1.5rem; }
+.thread-sub { margin-top: 3rem; }
+
+/* A photograph: centred on narrow screens, modest in size */
+.thread-photos { margin: 1.25rem 0 1.5rem; }
+.thread-photo { max-width: 16rem; margin: 0 auto; }
+.thread-photo + .thread-photo { margin-top: 2.25rem; }
+.thread-photo .photo-frame { transform: rotate(1.2deg); }
+.thread-photo + .thread-photo .photo-frame,
+.thread-pair .thread-photo:nth-child(even) .photo-frame { transform: rotate(-1deg); }
+a.photo-frame { color: inherit; }
+a.photo-frame:hover { box-shadow: 0 3px 14px rgba(58, 46, 36, 0.4); }
+
+/* Licence credit under the Singer photograph: small, quiet, the one visible line under any photo */
+.photo-credit {
+  margin: 1.1rem 0.25rem 0;
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+  line-height: 1.45;
+}
+.photo-credit a { color: var(--color-text-muted); }
+
+/* Two photographs side by side (they wrap to one under the other on a phone) */
+.thread-pair {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2.25rem 2rem;
+  margin: 2rem 0 0.5rem;
+}
+.thread-pair .thread-photo { flex: 1 1 12rem; max-width: 14rem; margin: 0; }
+.thread-pair .thread-photo + .thread-photo { margin-top: 0; }
+
+/* The knitting Nancy pair is the heart of the page: the largest photographs */
+.thread-pair-large { margin-top: 2.5rem; margin-bottom: 1rem; }
+.thread-pair-large .thread-photo { flex-basis: 15rem; max-width: 19rem; }
+
+.chapter-end .back-to-top { margin-left: auto; }
+
+@media (min-width: 48rem) {
+  .thread-text {
+    --side-w: clamp(13rem, 22vw, 17rem);
+    --side-gap: 2.5rem;
+  }
+
+  /* Text-only blocks keep the reading width and sit centred, as on From the Scullery */
+  .thread-text .lead,
+  .thread-plain {
+    max-width: var(--width-reading);
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .thread-text .lead { margin-bottom: 0; }
+
+  /* A block with a photo on one side: the text stays one column; the photo
+     floats into the padding on its own side so text never wraps under it */
+  .thread-side { display: flow-root; }
+  .thread-side-right { padding-right: calc(var(--side-w) + var(--side-gap)); }
+  .thread-side-left { padding-left: calc(var(--side-w) + var(--side-gap)); }
+
+  .thread-side .thread-photos { width: var(--side-w); margin-top: 0.5rem; margin-bottom: 1rem; }
+  .thread-side .thread-photo { max-width: none; }
+  .thread-side-right .thread-photos {
+    float: right;
+    margin-left: 0;
+    margin-right: calc(-1 * (var(--side-w) + var(--side-gap)));
+  }
+  .thread-side-left .thread-photos {
+    float: left;
+    margin-right: 0;
+    margin-left: calc(-1 * (var(--side-w) + var(--side-gap)));
+  }
+
+  .thread-pair .thread-photo { flex-basis: 13rem; max-width: 15rem; }
+  .thread-pair-large .thread-photo { flex-basis: 17rem; max-width: 19rem; }
+}
+
+/* ==========================================================================
+   5e. ABOUT THE STORYTELLER: quiet and personal, one column, one portrait
+   ========================================================================== */
+
+.about { padding-top: 2.5rem; }
+.about h1 { margin-bottom: 1.5rem; }
+.about-photo { max-width: 16rem; margin: 0 auto 2rem; }
+.about-text p { line-height: 1.7; margin-bottom: 1.1em; }
+.about-end { margin: 2rem 0 0; font-size: 0.95rem; }
+.about-end a { color: var(--color-text-muted); }
+
+@media (min-width: 48rem) {
+  /* the portrait sits to the right of the text, which wraps beside it */
+  .about-photo { float: right; width: 15rem; max-width: none; margin: 0.5rem 0 1.25rem 2.5rem; }
+  .about-end { clear: both; }
+}
+
+/* ==========================================================================
    6. WIDER SCREENS
    ========================================================================== */
+
+/* Phones: five nav items fit on two tidy rows (no menu needed) */
+@media (max-width: 30rem) {
+  .nav-list { gap: 0 1rem; }
+  .nav-list a { font-size: 0.95rem; }
+}
 
 /* Very narrow phones: keep the long book title to three tidy lines */
 @media (max-width: 24rem) {
@@ -485,6 +611,7 @@ a { color: var(--color-link); text-underline-offset: 0.2em; }
   h1 { font-size: 3rem; }
 
   .hero-inner { grid-template-columns: 1.1fr 1fr; align-items: center; gap: 3.5rem; }
+  .hero { padding-bottom: 1.25rem; } /* keeps "Welcome hame" close to the divider below it */
   .door-grid { grid-template-columns: repeat(2, 1fr); }
   .book-head-inner { grid-template-columns: 1fr 14rem; align-items: start; gap: 3rem; }
 }
