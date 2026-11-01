@@ -372,6 +372,115 @@ a { color: var(--color-link); text-underline-offset: 0.2em; }
 .to-top-float:hover { background: var(--color-surface-alt); }
 
 /* ==========================================================================
+   5c. FROM THE SCULLERY: the photo pile (loose photographs, each on a cream
+       mat with a small tilt; overlap only ever crops edges and corners).
+       Plain HTML and CSS: no JavaScript involved.
+   ========================================================================== */
+
+/* A pile is a one-cell grid: every photo sits in the same cell and is nudged
+   by its own offset, so the pile is always as tall as its lowest photo. */
+.pile {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  width: 100%;
+  max-width: 16rem;
+  margin: 1.25rem auto 1.75rem;
+}
+
+.pile img {
+  grid-area: 1 / 1;
+  align-self: start;
+  display: block;
+  width: calc(var(--w, 100%) - 1.2rem);
+  height: auto;
+  margin: calc(0.6rem + var(--dy, 0rem)) 0.6rem 0.6rem;
+  transform: translateX(var(--dx, 0)) rotate(var(--tilt, 0deg));
+  /* the mat and its edge are shadows, so the photo itself is never stretched */
+  box-shadow:
+    0 0 0 0.5rem var(--color-surface),
+    0 0 0 calc(0.5rem + 1px) var(--color-line),
+    0 3px 10px 0.5rem rgba(58, 46, 36, 0.22);
+}
+
+.pile img:nth-child(even) { justify-self: end; }
+
+/* Opening pile: two photographs, side by side, the second a little lower */
+.pile-open { max-width: 22rem; }
+.pile-open img { --w: 58%; }
+.pile-open img:nth-child(2) { --dy: 14%; }
+
+/* Two photographs, the second lower and to the right */
+.pile-pair img { --w: 62%; }
+.pile-pair img:nth-child(2) { --dy: 46%; }
+
+/* Five biscuit strips fanned like a hand of cards (stage 1 at the back, stage 5
+   on top, each about 2.5rem lower), then the baking photograph just overlapping
+   the stack's bottom corner */
+.pile-stack img:nth-child(n) { justify-self: center; }
+.pile-stack img:nth-child(1) { --dy: 0rem; --dx: -0.4rem; }
+.pile-stack img:nth-child(2) { --dy: 2.5rem; --dx: 0.4rem; }
+.pile-stack img:nth-child(3) { --dy: 5rem; --dx: -0.3rem; }
+.pile-stack img:nth-child(4) { --dy: 7.5rem; --dx: 0.4rem; }
+.pile-stack img:nth-child(5) { --dy: 10rem; --dx: -0.2rem; }
+.pile-stack img:nth-child(6) {
+  --w: 72%;
+  grid-area: 2 / 1;
+  justify-self: end;
+  margin-top: -1.1rem;
+}
+
+/* Developer QA tool (?debug=alt) adds a line after each image; keep it tidy */
+.pile .debug-alt { grid-column: 1; position: relative; z-index: 3; }
+
+@media print {
+  .pile { break-inside: avoid; }
+}
+
+/* 48rem and up: dishes with photos get a side column. The pile floats into
+   padding on its own side, so the text stays one column and never wraps under
+   it. This page's container is widened to make room (narrow screens: no change). */
+@media (min-width: 48rem) {
+  .chapter-wide { max-width: calc(var(--width-reading) + 22.5rem + 2 * var(--gutter)); }
+  .scullery-text {
+    --pile-w: clamp(14rem, 25vw, 20rem);
+    --pile-gap: 2.5rem;
+  }
+
+  /* Everything without a pile keeps the live reading width and position */
+  .scullery-text .intro,
+  .scullery-text .pile-open,
+  .scullery-text .dish:not(.has-pile),
+  .scullery-text .closing,
+  .chapter-wide .chapter-end {
+    max-width: var(--width-reading);
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .scullery-text .pile-open { max-width: 26rem; }
+
+  .has-pile { display: flow-root; }
+  .has-pile-right { padding-right: calc(var(--pile-w) + var(--pile-gap)); }
+  .has-pile-left { padding-left: calc(var(--pile-w) + var(--pile-gap)); }
+
+  .has-pile .pile {
+    width: var(--pile-w);
+    max-width: none;
+    margin-top: 0.75rem;
+    margin-bottom: 1rem;
+  }
+  .has-pile-right .pile {
+    float: right;
+    margin-left: 0;
+    margin-right: calc(-1 * (var(--pile-w) + var(--pile-gap)));
+  }
+  .has-pile-left .pile {
+    float: left;
+    margin-right: 0;
+    margin-left: calc(-1 * (var(--pile-w) + var(--pile-gap)));
+  }
+}
+
+/* ==========================================================================
    6. WIDER SCREENS
    ========================================================================== */
 
