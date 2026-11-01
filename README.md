@@ -25,6 +25,8 @@ The Book's text is Julie's own wording from `Hameward_Bend.docx`. The one delibe
 
 From the Scullery's text is Julie's own wording from `These_are_the_family_recipes_I_remember.docx`, unchanged (her spelling, punctuation and apostrophes included). Its `EDIT HERE` blocks are: the page title and description, the introduction, one block per dish (heading, paragraphs and method, so each dish can be edited on its own), and the closing line. The only wording that isn't Julie's is the page's meta description and the "On this page", "Back to the book" and "Back to top" link labels.
 
+The photographs on From the Scullery have alt text but deliberately no visible captions (Julie's choice): no `<figcaption>`, no `title` attributes, no text over the photos. To move a photo to another dish, move its `<img>` into that dish's `<figure class="pile">` (or add one straight after the dish's `<h2>`, with `has-pile has-pile-left` or `has-pile-right` on the dish). The pile styling is section 5c of `css/styles.css`.
+
 ### Open items for Julie
 
 | Marker | Where | What's needed |
@@ -33,11 +35,10 @@ From the Scullery's text is Julie's own wording from `These_are_the_family_recip
 | `[ IngramSpark / buy link — Julie to supply ]` | The Book, "Where to buy" | The buy link (no button until then) |
 | `[ footer wording — Julie to confirm ]` | Footer (every page) | Her OK on the footer's "Memories and corrections are welcome" line and the reader contact address |
 | `[ TEMP — replace with Julie's own welcome ]` | Home, welcome line | Her own welcome words |
-| `[ Scullery photographs — … ]` | From the Scullery, after the introduction | Julie is waiting on permission from her children. Then the layout (a loose pile of photographs, some partly visible) still has to be designed. Nothing shows on the page until then |
 | `[ knitting / "Threads from the past" — … ]` | From the Scullery, end of the page | Julie to send material; whether it gets its own page or sits inside this one is still to be decided |
 | Burns epigraph | Home only | Not an open item: Julie asked for the quotation to live on Home only ("where it has real significance"). A comment on The Book marks where it was removed |
 
-The hero photo marker also shows as an amber block on the page. The two Scullery markers are comments only; nothing shows on the page.
+The hero photo marker also shows as an amber block on the page. The knitting marker is a comment only; nothing shows on the page.
 
 ## Adding a page
 
@@ -57,6 +58,8 @@ The hero photo marker also shows as an amber block on the page. The two Scullery
 ## Images
 
 Copy only what a page uses into `assets/images/`, with a descriptive lowercase-hyphenated name (e.g. `armour-street-tenement-1950s.jpg`), resized to about 1600px on the long edge. Write real alt text. Julie's originals stay where they are, untouched.
+
+From the Scullery: `assets/images/scullery/` holds 17 photographs (`kitchen-two-men-cooking.jpg`, `kitchen-child-in-apron.jpg`, `high-chair-toddler-with-bowl.jpg`, `girl-in-red-jacket-outdoors.jpg`, `boy-eating-roll-old-print.jpg`, `mince-and-potatoes-bowl.jpg`, `shortbread-fingers.jpg`, `empire-biscuits-1.jpg` to `empire-biscuits-5.jpg`, `kitchen-woman-and-two-girls-baking.jpg`, `clootie-dumpling-on-paper.jpg`, `halloween-cupcakes-girl-with-sweets.jpg`, `girl-with-hot-chocolate.jpg`, `dad-fishing-on-rocks.jpg`). These web copies are metadata-stripped (no GPS or camera data) and 1000px on the long edge (the five biscuit strips are 1200px wide). Keep it that way for any photo added later: family photos often carry GPS coordinates.
 
 The Book: front cover supplied by Julie (27 Oct 2026). Her wraparound cover is an unused alternative idea; its barcode and back-cover text stay off the site.
 
