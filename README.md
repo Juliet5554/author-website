@@ -27,7 +27,7 @@ From the Scullery's text is Julie's own wording, from her revised document of 1 
 
 The photographs on From the Scullery have alt text but deliberately no visible captions (Julie's choice): no `<figcaption>`, no `title` attributes, no text over the photos. To move a photo to another dish, move its `<img>` into that dish's `<figure class="pile">` (or add one straight after the dish's `<h2>`, with `has-pile has-pile-left` or `has-pile-right` on the dish). The pile styling is section 5c of `css/styles.css`.
 
-A Thread Through the Generations and About the Storyteller are also Julie's own words (`A_Thread_Through_the_Generations.txt`, `Personal bio.txt`). The one wording fix on the Threads page is "form the Shetlands" corrected to "from the Shetlands". Her sentence about the pink baby set is held back until its photograph arrives. Each photo there is a plain link to its `-large.jpg` twin (no JavaScript); the only visible line under any photo is the Singer licence credit.
+A Thread Through the Generations and About the Storyteller are also Julie's own words (`A_Thread_Through_the_Generations.txt`, `Personal bio.txt`). The one wording fix on the Threads page is "form the Shetlands" corrected to "from the Shetlands". Her sentence about the pink baby set (made by her sister) and its two photographs are now in "Made to be worn and loved". Each photo there is a plain link to its `-large.jpg` twin (no JavaScript); the only visible line under any photo is the Singer licence credit.
 
 ### Open items for Julie
 
@@ -37,11 +37,8 @@ A Thread Through the Generations and About the Storyteller are also Julie's own 
 | `[ Julie to confirm this is the final cover ]` | The Book, cover (HTML comment) | Her OK that the IngramSpark front panel is the final cover |
 | `[ footer wording — Julie to confirm ]` | Footer (every page) | Her OK on the footer's "Memories and corrections are welcome" line and the reader contact address |
 | `[ Julie to supply wedding-ring shawl photographs … ]` | Threads page, "The wedding ring shawl" (HTML comment) | Photographs of the whole shawl and a close-up. No photo until then |
-| `[ Julie to send the pink baby shawl, cardigan and bonnet photo … ]` | Threads page, "Made to be worn and loved" (HTML comment) | The photo; her sentence about the pink baby set stays unpublished until it arrives |
-| `[ Julie to confirm the shawl size: "6 to 6 feet" ]` | Threads page, shawl paragraph (HTML comment) | Her text says "6 to 6 feet square"; left as written |
-| `[ Julie sent a second, warmer version … ]` | About the Storyteller, portrait (HTML comment) | Which portrait she wants: `julie-portrait.jpg` (in use) or "Warm Portrait with Polka-Dot Scarf.png" |
+| Wording query (no marker) | Threads page, Singer | "to loan to other as she always used to say"; left as written |
 | Beyond the Book tense | The Book, "Beyond the Book" (HTML comment) | She asked about present tense; "will" kept until Patrick confirms with her |
-| Wording queries (no marker) | The Book Part 1; From the Scullery, Mince and Potatoes; Threads page, Singer | Part 1: "While other branches of the family establish their lives amid the working communities of Glasgow and Ayrshire." is a sentence fragment. Mince and Potatoes: "though seldom the case. Dad would reheat…". Singer: "to loan to other as she always used to say". All left as written |
 | Burns epigraph | Home only | Not an open item: Julie asked for the quotation to live on Home only ("where it has real significance"). A comment on The Book marks where it was removed |
 
 All the markers are HTML comments only; nothing shows on the page.
@@ -69,7 +66,7 @@ Home: `assets/images/keepsake-box-hero.jpg` (1600x1200), the keepsake box photo 
 
 From the Scullery: `assets/images/scullery/` holds 17 photographs (`kitchen-two-men-cooking.jpg`, `kitchen-child-in-apron.jpg`, `high-chair-toddler-with-bowl.jpg`, `girl-in-red-jacket-outdoors.jpg`, `boy-eating-roll-old-print.jpg`, `mince-and-potatoes-bowl.jpg`, `shortbread-fingers.jpg`, `empire-biscuits-1.jpg` to `empire-biscuits-5.jpg`, `kitchen-woman-and-two-girls-baking.jpg`, `clootie-dumpling-on-paper.jpg`, `halloween-cupcakes-girl-with-sweets.jpg`, `girl-with-hot-chocolate.jpg`, `dad-fishing-on-rocks.jpg`). These web copies are metadata-stripped (no GPS or camera data) and 1000px on the long edge (the five biscuit strips are 1200px wide). Keep it that way for any photo added later: family photos often carry GPS coordinates.
 
-Threads from the Past: `assets/images/knitting/` holds the knitting and sewing photographs, each with a `-large.jpg` twin (1350x1800 or 1800x1350) that the small version links to, plus the Singer museum photograph (no large twin). About the Storyteller: `assets/images/storyteller/julie-portrait.jpg` (677x660). All are metadata-stripped.
+Threads from the Past: `assets/images/knitting/` holds the knitting and sewing photographs, each with a `-large.jpg` twin (1350x1800 or 1800x1350) that the small version links to, plus the Singer museum photograph (no large twin). The pink baby set photos (`pink-baby-shawl-and-set.jpg`, `pink-baby-cardigan-and-shawl.jpg`, each with a `-large.jpg` twin) are in use. About the Storyteller: `assets/images/storyteller/julie-portrait.jpg` (1000x971, the warm portrait Julie chose). All are metadata-stripped.
 
 The Book: the front cover (`hameward-bend-front-cover-252.jpg`, 900x1350, 2:3) is the front panel of Julie's IngramSpark PDF `Hameward_Cover_252.pdf`, supplied 31 Oct 2026. It is in use; Julie is to confirm it is final. The back cover, spine and barcode stay off the site. The earlier keepsake-box cover has been removed.
 
