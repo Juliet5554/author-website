@@ -661,6 +661,7 @@ p.record-note { margin-bottom: 1.25rem; }
 }
 .source-photo .photo-credit { margin-left: 0; margin-right: 0; }
 
+.research-text .story-subtitle { margin: -0.25rem 0 1.5rem; font-size: 1.15rem; }
 .research-text .closing-link { margin-top: 2rem; font-style: italic; font-size: 1.1rem; }
 
 /* ==========================================================================
