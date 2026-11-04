@@ -624,6 +624,7 @@ p.record-note { margin-bottom: 1.25rem; }
 /* A record image: plain mat, straight, with its corners left uncovered */
 .record-figure { margin: 1.75rem 0 2.25rem; }
 .record-figure-tall { max-width: 26rem; }
+.record-figure-small { max-width: 38rem; }
 .photo-frame-record { transform: none; border-width: 0.5rem; }
 .photo-frame-record::before,
 .photo-frame-record::after { display: none; }
