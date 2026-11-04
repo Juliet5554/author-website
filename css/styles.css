@@ -49,7 +49,7 @@ body {
   line-height: 1.65;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
   text-wrap: balance; /* even line lengths; ignored by older browsers */
   font-family: var(--font-display);
   color: var(--color-heading);
@@ -314,7 +314,7 @@ a { color: var(--color-link); text-underline-offset: 0.2em; }
 .scullery-text .intro { margin-bottom: 1rem; }
 
 .dish { margin-top: 4rem; }
-.dish h2 { margin-bottom: 0.8rem; font-size: 1.5rem; }
+.dish h3 { margin-bottom: 0.8rem; font-size: 1.5rem; }
 
 /* "Ingredients and method" / "Method": a small label, not a heading */
 .scullery-text .recipe-label {
@@ -488,6 +488,24 @@ a { color: var(--color-link); text-underline-offset: 0.2em; }
 }
 
 /* ==========================================================================
+   5b-2. THE WAYS OF HOME: one page holding From the Scullery, then A Thread
+         Through the Generations. Section headings (h2) sit above the dishes
+         and the knitting sections (h3).
+   ========================================================================== */
+
+.ways-intro { margin: 1.25rem 0 0; font-size: 1.25rem; font-style: italic; line-height: 1.6; }
+.ways-heading { margin: 0 0 0.5rem; font-size: 1.9rem; }
+.thread-text { margin-top: 6rem; }
+.jump ul + ul { margin-top: 0.4rem; }
+@media (min-width: 48rem) {
+  .ways-heading {
+    max-width: var(--width-reading);
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* ==========================================================================
    5d. A THREAD THROUGH THE GENERATIONS: one column of reading text, with
        photographs on alternating sides. Every photograph sits in the same
        parchment frame as the Home photo and is never cropped: the picture
@@ -499,8 +517,9 @@ a { color: var(--color-link); text-underline-offset: 0.2em; }
 .thread-text p { line-height: 1.7; }
 
 .thread-section { margin-top: 4rem; }
-.thread-section h2 { margin-bottom: 0.8rem; font-size: 1.5rem; }
+.thread-section h3 { margin-bottom: 0.8rem; font-size: 1.5rem; }
 .thread-sub { margin-top: 3rem; }
+.thread-sub h4 { margin-bottom: 0.5rem; font-size: 1.3rem; }
 
 /* A photograph: centred on narrow screens, modest in size */
 .thread-photos { margin: 1.25rem 0 1.5rem; }

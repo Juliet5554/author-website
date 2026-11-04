@@ -1,7 +1,7 @@
 /* ==========================================================================
    main.js: optional extras only. Every page is complete without it.
    Words live in the HTML files (look for "EDIT HERE" comments).
-     1. Floating "Back to top" button on The Book and From the Scullery (wide screens only)
+     1. Floating "Back to top" button on The Book and The Ways of Home (wide screens only)
      2. Developer QA tools: ?debug=alt and ?debug=headings
    ========================================================================== */
 
