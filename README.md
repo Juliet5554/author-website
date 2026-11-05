@@ -31,14 +31,15 @@ A Thread Through the Generations and About the Storyteller are also Julie's own 
 
 The Research Journey is Julie's own wording (`Finding_Papa_in_the_Records.txt`, `Following_the_Merrilees_Family.txt`, `Carradale_First_Mate_and_Artist_Patrick_FAMILY_CONNECTION.txt`, 1 Nov 2026), in two sections: Finding Papa in the Records; Following the Merrilees Family. (The Carradale section was removed at Julie's request on 4 Nov 2026; the Carradale now lives on the Sailing Stories page.) Her notes to Patrick, permissions notes, design suggestions, checklists and editorial notes are not published. Where a record image isn't available yet, a short text of hers stands in and a hidden marker shows where the image goes (casualty register). The Kirk Session extract (1 March 1863) is now a picture with Julie's own credit line; it replaced the stand-in text. For the casualty register, her caption line ("Casualty register: HMS Snapdragon on the left-hand page.") and her "image will be added once reproduction arrangements are confirmed" line are kept in a hidden comment to restore with the image. The page deliberately has no intro line yet (hidden marker). The poorhouse is not described as burned down: the corrected entry records injuries from burning, nothing more.
 
-Sailing Stories (`sailing-stories/index.html`) holds one story so far, "The Sailor and the Artist", in Julie's own words (4 Nov 2026). The other two stories (The Mystery of the Bermuda; The Ainsdale and the Azul) have no stubs: add each as a new `<section class="research-section">` in that page when her text arrives. Her optional gallery of Gregory Robinson drawings is deliberately left out. The page reuses the Research Journey's styles; the closing link goes to the Book page.
+Sailing Stories (`sailing-stories/index.html`) holds one story so far, "The Sailor and the Artist", in Julie's own words (4 Nov 2026). The other two stories (The Mystery of the Bermuda; The Ainsdale and the Azul) have no stubs: add each as a new `<section class="research-section">` in that page when her text arrives. The colourised Carradale photograph carries Frank Hellsten's own accreditation label, used with his permission (5 Nov 2026); the crew list carries the State Records NSW source line; a Nielsen source line (the English summary of his Akvarellen article, linked) closes the "A voyage through an artist's eyes" section. Her optional gallery of Gregory Robinson drawings is deliberately left out. The page reuses the Research Journey's styles; the closing link goes to the Book page.
+
+The six linked record images (the five National Records of Scotland scans on the Research Journey and the crew list on Sailing Stories) carry a visible "Select the image to enlarge it." line under their credit. The kirk session extract, the Snapdragon photograph and the colourised Carradale do not, because they have no larger version.
 
 ### Open items for Julie
 
 | Marker | Where | What's needed |
 |---|---|---|
 | `[ IngramSpark / buy link — Julie to supply ]` | The Book, "Where to buy" | The buy link (no button until then) |
-| `[ Julie to confirm this is the final cover ]` | The Book, cover (HTML comment) | Her OK that the IngramSpark front panel is the final cover |
 | `[ footer wording — Julie to confirm ]` | Footer (every page) | Her OK on the footer's "Memories and corrections are welcome" line and the reader contact address |
 | Pink vs cream baby set | The Ways of Home, "Made to be worn and loved" | Only the cream photo remains, but Julie's sentence still says "The pink baby shawl…" (left as written); ask her whether the sentence should change |
 | `[ Julie to supply short intro for the Research Journey page ]` | Research Journey, top (HTML comment) | A one-line intro, if she wants one |
@@ -46,8 +47,6 @@ Sailing Stories (`sailing-stories/index.html`) holds one story so far, "The Sail
 | `[ Julie to confirm: image reads "8th March 1830" … ]` | Research Journey, marriage credit | Date: image says 8 March 1830, her email said 8 February. Page uses the image |
 | `[ Julie to confirm: image header reads 713/32, page 11 … ]` | Research Journey, George's death credit | Reference: image says 713/32, p. 11, her email said 713/7, entry 32. Page uses the image |
 | `[ credit wording: Julie to choose … ]` | Research Journey, Sources | "Accessed through" or "Image reproduced via" ScotlandsPeople, for all five record credits (currently mixed: birth and Barbara's two use "Accessed through"; marriage and George's death use "Image reproduced via") |
-| `credit/permission for colourised version to be confirmed with Julie` | Sailing Stories, colourised Carradale photo (HTML comment) | Confirm permission and credit for Frank Hellsten's colourised version (original: Allan C. Green, State Library Victoria) |
-| `archive source credit to be confirmed with Julie` | Sailing Stories, 1903 crew list (HTML comment) | The archive reference and reproduction terms for the Sydney inward crew list |
 | Held Scullery labels (five hidden comments) | The Ways of Home (Scullery part), above each photo | Whether her granddaughters' first names may be public (nameless options are in each comment) |
 | Wording query (no marker) | The Ways of Home (Threads part), Singer | "to loan to other as she always used to say"; left as written |
 | Beyond the Book tense | The Book, "Beyond the Book" (HTML comment) | She asked about present tense; "will" kept until Patrick confirms with her |
@@ -84,7 +83,7 @@ The Research Journey: `assets/images/research/` holds five National Records of S
 
 The Ways of Home, Threads part: `assets/images/knitting/` holds the knitting and sewing photographs, each with a `-large.jpg` twin (1350x1800 or 1800x1350) that the small version links to, plus the Singer museum photograph (no large twin). The one baby set photo is `cream-baby-shawl-and-set.jpg` (with its `-large.jpg` twin); the two pink-cast photos of the same set were removed on 4 Nov 2026 and their files deleted. Also in use: `sewing-basket-open-lid.jpg` (with its twin). About the Storyteller: `assets/images/storyteller/julie-portrait.jpg` (1000x971, the warm portrait Julie chose). All are metadata-stripped.
 
-The Book: the front cover (`hameward-bend-front-cover-252.jpg`, 900x1350, 2:3) is the front panel of Julie's IngramSpark PDF `Hameward_Cover_252.pdf`, supplied 31 Oct 2026. It is in use; Julie is to confirm it is final. The back cover, spine and barcode stay off the site. The earlier keepsake-box cover has been removed.
+The Book: the front cover (`hameward-bend-front-cover-252.jpg`, 900x1350, 2:3) is the front panel of Julie's IngramSpark PDF `Hameward_Cover_252.pdf`, supplied 31 Oct 2026. It is in use; Julie confirmed on 5 Nov 2026 that it is final (rainy street for the Book cover, seaman's box photograph for the Home hero). The back cover, spine and barcode stay off the site. The earlier keepsake-box cover has been removed.
 
 ## Launching (removing noindex)
 
