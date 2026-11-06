@@ -41,14 +41,11 @@ The six linked record images (the five National Records of Scotland scans on the
 |---|---|---|
 | `[ IngramSpark / buy link — Julie to supply ]` | The Book, "Where to buy" | The buy link (no button until then) |
 | `[ footer wording — Julie to confirm ]` | Footer (every page) | Her OK on the footer's "Memories and corrections are welcome" line and the reader contact address |
-| Pink vs cream baby set | The Ways of Home, "Made to be worn and loved" | Only the cream photo remains, but Julie's sentence still says "The pink baby shawl…" (left as written); ask her whether the sentence should change |
 | `[ Julie to supply short intro for the Research Journey page ]` | Research Journey, top (HTML comment) | A one-line intro, if she wants one |
-| `[ casualty register image awaiting Julie's licence ]` | Research Journey, "The casualty register" | The licensed register image and full archive reference |
+| `[ casualty register image awaiting Julie's licence ]` | Research Journey, "The casualty register" | Permission for the register image is still awaited; the image stays hidden. Her credit text (The National Archives, ADM 358/4183) and heading wording are held in the HTML comment, ready to restore with the image |
 | `[ Julie to confirm: image reads "8th March 1830" … ]` | Research Journey, marriage credit | Date: image says 8 March 1830, her email said 8 February. Page uses the image |
 | `[ Julie to confirm: image header reads 713/32, page 11 … ]` | Research Journey, George's death credit | Reference: image says 713/32, p. 11, her email said 713/7, entry 32. Page uses the image |
-| `[ credit wording: Julie to choose … ]` | Research Journey, Sources | "Accessed through" or "Image reproduced via" ScotlandsPeople, for all five record credits (currently mixed: birth and Barbara's two use "Accessed through"; marriage and George's death use "Image reproduced via") |
 | Held Scullery labels (five hidden comments) | The Ways of Home (Scullery part), above each photo | Whether her granddaughters' first names may be public (nameless options are in each comment) |
-| Wording query (no marker) | The Ways of Home (Threads part), Singer | "to loan to other as she always used to say"; left as written |
 | Beyond the Book tense | The Book, "Beyond the Book" (HTML comment) | She asked about present tense; "will" kept until Patrick confirms with her |
 | Burns epigraph | Home only | Not an open item: Julie asked for the quotation to live on Home only ("where it has real significance"). A comment on The Book marks where it was removed |
 
