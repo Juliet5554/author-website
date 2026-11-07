@@ -649,6 +649,24 @@ p.record-note { margin-bottom: 1.25rem; }
 .photo-frame-record::after { display: none; }
 .record-figure .photo-credit { margin-left: 0; margin-right: 0; }
 
+/* "Read this as a list": the text version of the family tree (native details/summary, no script) */
+.tree-list { margin-top: 1rem; }
+.tree-list summary {
+  cursor: pointer;
+  font-size: 1rem;
+  color: var(--color-link);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+.tree-list summary:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 3px;
+}
+.tree-list[open] summary { margin-bottom: 0.75rem; }
+.tree-list p { margin-bottom: 0.4em; }
+.tree-list ul { margin: 0 0 1.25rem; padding-left: 1.4rem; }
+.tree-list li { margin-bottom: 0.4em; font-size: 1rem; line-height: 1.5; }
+
 /* Small archive photograph, shown at its natural size (never stretched) */
 .source-photo { margin: 1.5rem 0 2rem; }
 .source-photo img {
