@@ -358,6 +358,10 @@ a { color: var(--color-link); text-underline-offset: 0.2em; }
 .back-to-top { margin: 1.25rem 0 0; font-size: 0.95rem; text-align: right; }
 .back-to-top a { color: var(--color-text-muted); }
 
+/* Per-section "Back to top" link (not .back-to-top: main.js reads that class for the floating button's label) */
+.section-top { margin: 1.25rem 0 0; font-size: 0.95rem; text-align: right; }
+.section-top a { color: var(--color-text-muted); }
+
 /* Floating "Back to top" button (added by main.js). Wide screens only: on a
    narrow screen it would cover the text, so the section links do the job. */
 .to-top-float {
