@@ -770,3 +770,8 @@ p.record-note { margin-bottom: 1.25rem; }
 .debug-row { white-space: pre-wrap; }
 .debug-bad { color: #ff8080; }
 .debug-alt.debug-bad { background: #7a0000; color: #fff; }
+
+/* Music page: responsive 16:9 wrapper for the YouTube playlist embed */
+.video-wrap { position: relative; aspect-ratio: 16 / 9; margin: 1.75rem 0 1rem; background: var(--color-surface-alt); border: 1px solid var(--color-line); }
+.video-wrap iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.research-text .music-note { font-size: 1rem; color: var(--color-text-muted); }
