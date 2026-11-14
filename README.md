@@ -44,7 +44,6 @@ The linked record images (the five National Records of Scotland scans and the ca
 | `[ IngramSpark / buy link — Julie to supply ]` | The Book, "Where to buy" | The buy link (no button until then) |
 | `[ footer wording — Julie to confirm ]` | Footer (every page) | Her OK on the footer's "Memories and corrections are welcome" line and the reader contact address |
 | `[ Julie to supply short intro for the Research Journey page ]` | Research Journey, top (HTML comment) | A one-line intro, if she wants one |
-| Story order | Sailing Stories | Ainsdale story was placed after Sailor and Artist (our assumption) |
 | Bermuda painting | Sailing Stories, Clipper Routes | The file is only 816px wide, so there is no enlarge link; a larger `IMG_0149.jpeg` may be in her 8 Nov 2026 email. The painting shows three masts, though the handoff called it four-masted, so the alt text describes what is visible |
 | Music page text and song list | Music, whole page | Julie's own words (`Music of the Book.docx`, sent 9 Nov 2026). Spanish Ladies is on her playlist but has no entry in her text yet (hidden marker in the page) |
 | `[ Julie to confirm: tree death years ]` | Research Journey, tree comment | This file shows 1985 and 1984 for Elizabeth Knox Muir Dawe and Frank Dawe MM; her earlier tree showed 1987 for both. Also confirm Peter Merrilees McCann's date, shown here as 5 Feb 1976 |
