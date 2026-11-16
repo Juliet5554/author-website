@@ -45,13 +45,13 @@ The linked record images (the five National Records of Scotland scans and the ca
 | `[ footer wording — Julie to confirm ]` | Footer (every page) | Her OK on the footer's "Memories and corrections are welcome" line and the reader contact address |
 | `[ Julie to supply short intro for the Research Journey page ]` | Research Journey, top (HTML comment) | A one-line intro, if she wants one |
 | Bermuda painting | Sailing Stories, Clipper Routes | The file is only 816px wide, so there is no enlarge link; a larger `IMG_0149.jpeg` may be in her 8 Nov 2026 email. The painting shows three masts, though the handoff called it four-masted, so the alt text describes what is visible |
-| Music page text and song list | Music, whole page | Julie's own words (`Music of the Book.docx`, sent 9 Nov 2026). Spanish Ladies is on her playlist but has no entry in her text yet (hidden marker in the page) |
 | `[ Julie to confirm: tree death years ]` | Research Journey, tree comment | This file shows 1985 and 1984 for Elizabeth Knox Muir Dawe and Frank Dawe MM; her earlier tree showed 1987 for both. Also confirm Peter Merrilees McCann's date, shown here as 5 Feb 1976 |
 | Held Scullery labels (five hidden comments) | The Ways of Home (Scullery part), above each photo | Whether her granddaughters' first names may be public (nameless options are in each comment) |
 | Beyond the Book tense | The Book, "Beyond the Book" (HTML comment) | She asked about present tense; "will" kept until Patrick confirms with her |
 | Burns epigraph | Home only | Not an open item: Julie asked for the quotation to live on Home only ("where it has real significance"). A comment on The Book marks where it was removed |
 
 Resolved 14 Nov 2026 (Pass 17): SS Ikalis and Seaman corrections applied per Julie’s email of 9 Nov 2026; story order confirmed.
+Resolved 16 Nov 2026 (Pass 18): Music page. Angel Child confirmed as written; chapter for Let the Rest of the World Go By corrected to "Just a Spot to Call Our Own"; Spanish Ladies taken off her playlist by Julie (not in the book), so the playlist and the written list now both hold the same 13 songs; Julie reports every song plays.
 
 All the markers are HTML comments only; nothing shows on the page.
 
@@ -90,13 +90,9 @@ The Book: the front cover (`hameward-bend-front-cover-252.jpg`, 900x1350, 2:3) i
 
 The page text is Julie's own (`Music of the Book.docx`, her email of 9 Nov 2026), kept word for word apart from curly quotes. Inside the one `article.research-text` are eight `research-section`s, each with an `h2` and a unique id: `songs-that-travelled` (intro), `listen` (subtitle, the playlist embed and its two notes), then the era sections `songs-first-world-war`, `songs-gramophone-years`, `songs-scullery` (titles only, closing line links to `../the-ways-of-home/#scullery`), `songs-second-world-war`, `songs-1950s`, and `music-across-generations` (closing paragraphs). Songs sit in `<ul class="song-list">`, one `<li>` each: bold "Title — Performer", her description, and (where she gave one) `<em class="song-chapter">From the chapter: …</em>`. The lists are not numbered because the order is by era, not playlist order. `.song-list` and `.song-chapter` are at the end of `css/styles.css`, using existing variables only. There are no links on titles and no audio other than the playlist.
 
-Four hidden HTML comments sit at the top of the text (nothing shows on the page), each waiting on Julie:
-- **Angel Child** is listed under Al Jolson, but her 26 Oct note said Angel Face and Angel Child were both dropped. Confirm.
-- **Chapter names** to check against the manuscript: "Just a Spot in Heaven" (her earlier brief said "Just a Spot to Call Our Own"), "The Other Frank", "Newfield Square", "Bet's War", "Ma, I Miss Your Apple Pie".
-- **Playlist check (14 Nov 2026):** her playlist has 14 items (the 13 songs in the text plus Spanish Ladies); 2 are unavailable, so 12 play. Ask which two cannot play and whether to keep them in the text. Do not add or remove songs ourselves.
-- **Spanish Ladies** is on the playlist but has no entry in her text. Ask whether she wants a line and under which heading.
+All four hidden markers on this page were resolved on 16 Nov 2026 (Pass 18); see the Resolved line under Open items for Julie.
 
-`music/index.html` embeds Julie's public YouTube playlist, "Hameward Bend - The songs from the book" (`list=PLAv6vbEGZKG8`), through the privacy-enhanced domain `www.youtube-nocookie.com`, in a responsive 16:9 wrapper (`.video-wrap`) with a `title` and `loading="lazy"`. A note says YouTube may set cookies when a video plays, and a plain link to the playlist on YouTube is the fallback for any recording that blocks embedding. Songs are added or removed in Julie's YouTube account and the page follows by itself; she was told to keep on the playlist any song the site text refers to. It is the one place the site loads anything from a third party, and only when the page is opened. Playback of each song has not been tested one by one: do that in a browser before launch.
+`music/index.html` embeds Julie's public YouTube playlist, "Hameward Bend - The songs from the book" (`list=PLAv6vbEGZKG8`), through the privacy-enhanced domain `www.youtube-nocookie.com`, in a responsive 16:9 wrapper (`.video-wrap`) with a `title` and `loading="lazy"`. A note says YouTube may set cookies when a video plays, and a plain link to the playlist on YouTube is the fallback for any recording that blocks embedding. Songs are added or removed in Julie's YouTube account and the page follows by itself; she was told to keep on the playlist any song the site text refers to. It is the one place the site loads anything from a third party, and only when the page is opened. Julie reports (15 Nov 2026) that every song plays for her; Patrick still plays through the whole list in a browser before launch.
 
 ## National Archives (TNA) image licence
 
