@@ -780,3 +780,6 @@ p.record-note { margin-bottom: 1.25rem; }
 .research-text .song-list { margin: 1rem 0 0; padding: 0; list-style: none; }
 .research-text .song-list li { margin: 0 0 1.1rem; }
 .research-text .song-chapter { font-size: 0.9rem; color: var(--color-text-muted); }
+
+/* Visually hidden text: available to screen readers and in the page source, not shown on screen */
+.visually-hidden { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
