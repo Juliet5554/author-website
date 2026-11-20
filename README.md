@@ -117,6 +117,20 @@ This is a deliberate step for Patrick, once Julie decides to go public:
    (or delete the file).
 3. Push. Search engines can take days or weeks to pick the site up.
 
+## Favicon
+
+The browser-tab icon is a simple outline of the terraced houses in Armour Street. It comes from Julie's own drawing (`Favicon-armour-street.png`, sent 19 Nov 2026 "as just an idea"; Patrick is telling her it is on the site and she can say no). Nothing was redrawn: the silhouette was cropped to its edges, scaled to fill a square and placed on the site's cream paper colour (#F4ECD8), because a dark outline on a transparent background disappears on a dark browser tab. It is recognisable at 32px; at 16px it reads as a block of houses in perspective rather than showing windows and chimneys.
+
+The three files sit at the repo root:
+
+- `favicon.ico` holds 16, 32 and 48px versions.
+- `favicon-32x32.png`
+- `apple-touch-icon.png` (180x180, used when a page is saved to a phone's home screen).
+
+Every page's `<head>` links all three (`../` in front of the path on the pages inside folders). They carry no metadata, and Julie's 1254px source file is not in the repo.
+
+To replace the icon, make a new square image with the same three file names and sizes, drop the files over the old ones at the repo root, and check each for metadata the way the "Image metadata and C2PA" section describes. No HTML change is needed. To remove it, delete the three `<link>` lines for the icons from each page's head and the three files.
+
 ## Developer QA tools
 
 Add to any page's address. They're for checking the build, not for visitors, and nothing shows without them.
