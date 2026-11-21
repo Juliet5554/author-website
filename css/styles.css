@@ -787,3 +787,8 @@ p.record-note { margin-bottom: 1.25rem; }
 /* A row of small photographs that sit side by side and wrap on narrow screens (Newfoundland Regiment, the three medal photographs) */
 .photo-row { display: flex; flex-wrap: wrap; gap: 1rem; align-items: flex-start; margin: 1.5rem 0 0; }
 .photo-row .source-photo { margin: 0; }
+
+/* Header logo: Julie's Armour Street mark beside the site name. Inline flex row, centred; the brand text size and font are unchanged. */
+.header-inner { align-items: center; }
+.brand { display: inline-flex; align-items: center; gap: 0.6rem; }
+.brand-mark { height: 2.25rem; width: auto; flex-shrink: 0; }

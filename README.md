@@ -55,6 +55,7 @@ The linked record images (the five National Records of Scotland scans and the ca
 
 Resolved 14 Nov 2026 (Pass 17): SS Ikalis and Seaman corrections applied per Julie’s email of 9 Nov 2026; story order confirmed.
 Resolved 16 Nov 2026 (Pass 18): Music page. Angel Child confirmed as written; chapter for Let the Rest of the World Go By corrected to "Just a Spot to Call Our Own"; Spanish Ladies taken off her playlist by Julie (not in the book), so the playlist and the written list now both hold the same 13 songs; Julie reports every song plays.
+Changed 21 Nov 2026 (Pass 23): Julie's Armour Street logo added to the header of every page as a small navy mark beside the site name (see "Logo"); the favicon is unchanged.
 Changed 21 Nov 2026 (Pass 22): four new pages (John Glass, Poetry Through the Generations, The Newfoundland Regiment – Battle of Langemarck 1917, Dad's India Album), each with a Home door and a nav item (nav now eleven items); the second Carradale photo on Sailing Stories swapped for the State Library of Queensland photograph; one small CSS rule (`.photo-row`) added for the three medal photographs.
 Changed 18 Nov 2026 (Pass 19): Home hero photo and Book cover swapped for the new images Julie sent (`home-new.jpeg`, `cover-new.png`); the North Berwick kirk session image replaced by Julie's own text and source line at her request (the PNG stays in public git history); Music page song titles now link to their YouTube videos.
 
@@ -146,6 +147,12 @@ The three files sit at the repo root:
 Every page's `<head>` links all three (`../` in front of the path on the pages inside folders). They carry no metadata, and Julie's 1254px source file is not in the repo.
 
 To replace the icon, make a new square image with the same three file names and sizes, drop the files over the old ones at the repo root, and check each for metadata the way the "Image metadata and C2PA" section describes. No HTML change is needed. To remove it, delete the three `<link>` lines for the icons from each page's head and the three files.
+
+## Logo
+
+The header shows a small mark beside "The House That Waited" on every page: `assets/images/logo/armour-street-mark.png` (150x108, a silhouette of the Armour Street terrace). It comes from Julie's own logo (`Julie-logo-armour-street.png`, sent 21 Nov 2026; she said to alter it or say if another colour is better). Her original is not in the repo. It was made by trimming the transparent margin, recolouring the ink from her near-black teal (about #0F2625) to the site's navy `#1f2a44` (the same as `--color-text`, so it matches the brand text), keeping her alpha channel so the edges stay smooth, and resizing to about three times its displayed height (displayed at 2.25rem tall). It was saved fresh from pixels only: her file carried C2PA/JUMBF data (`caBX`, `jumb`, `c2pa`), and a byte scan of the repo copy finds none of `Exif`, `c2pa`, `jumb`, `caBX`, `XMP`, `iTXt`, `tEXt`.
+
+It sits inside the existing brand link with `alt=""` (the words beside it name the link, so its accessible name is still "The House That Waited") and explicit `width`/`height`. The styles are `.brand`, `.brand-mark` and one `.header-inner { align-items: center; }` line at the end of `css/styles.css`. To change the colour, redo the recolour on her original and replace the file; no HTML change is needed. To remove the mark, delete the `<img class="brand-mark" …>` from each page's header. The favicon is separate and unchanged (the Pass 21 version). Per-page logos (a music note, a ship) are undecided and not built.
 
 ## Developer QA tools
 
