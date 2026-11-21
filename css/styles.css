@@ -783,3 +783,7 @@ p.record-note { margin-bottom: 1.25rem; }
 
 /* Visually hidden text: available to screen readers and in the page source, not shown on screen */
 .visually-hidden { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+
+/* A row of small photographs that sit side by side and wrap on narrow screens (Newfoundland Regiment, the three medal photographs) */
+.photo-row { display: flex; flex-wrap: wrap; gap: 1rem; align-items: flex-start; margin: 1.5rem 0 0; }
+.photo-row .source-photo { margin: 0; }
