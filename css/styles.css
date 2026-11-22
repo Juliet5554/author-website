@@ -162,8 +162,14 @@ a { color: var(--color-link); text-underline-offset: 0.2em; }
 .epigraph p { margin: 0 0 0.35rem; font-style: italic; font-size: 1.2rem; }
 .epigraph figcaption { color: var(--color-text-muted); font-size: 1rem; }
 
-/* Set well apart from the quotation above; no bottom margin so it sits near the divider below */
-.welcome { max-width: 32rem; margin: 3rem 0 0; }
+/* "Welcome hame": a paragraph above the title (same look as the old h2), with a small gap before it */
+.welcome {
+  margin: 0 0 0.6rem;
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  line-height: 1.2;
+  color: var(--color-heading);
+}
 
 /* Photo frame: parchment mat, photo corners */
 .hero-photo { margin: 0; }
@@ -723,8 +729,8 @@ p.record-note { margin-bottom: 1.25rem; }
   h1 { font-size: 3rem; }
 
   .hero-inner { grid-template-columns: 1.1fr 1fr; align-items: center; gap: 3.5rem; }
-  .hero { padding-bottom: 1.25rem; } /* keeps "Welcome hame" close to the divider below it */
   .door-grid { grid-template-columns: repeat(2, 1fr); }
+  .door-grid .door:last-child:nth-child(odd) { grid-column: 1 / -1; } /* ninth card spans both columns: no orphan */
   .book-head-inner { grid-template-columns: 1fr 14rem; align-items: start; gap: 3rem; }
 }
 
@@ -734,7 +740,8 @@ p.record-note { margin-bottom: 1.25rem; }
 }
 
 @media (min-width: 64rem) {
-  .door-grid { grid-template-columns: repeat(4, 1fr); }
+  .door-grid { grid-template-columns: repeat(3, 1fr); }
+  .door-grid .door:last-child:nth-child(odd) { grid-column: auto; }
 }
 
 /* ==========================================================================
