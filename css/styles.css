@@ -164,9 +164,9 @@ a { color: var(--color-link); text-underline-offset: 0.2em; }
 
 /* "Welcome hame": a paragraph above the title (same look as the old h2), with a small gap before it */
 .welcome {
-  margin: 0 0 0.6rem;
+  margin: 0 0 1.1rem;
   font-family: var(--font-display);
-  font-size: 1.75rem;
+  font-size: 2rem;
   line-height: 1.2;
   color: var(--color-heading);
 }
@@ -727,6 +727,7 @@ p.record-note { margin-bottom: 1.25rem; }
 @media (min-width: 48rem) {
   :root { --gutter: 2rem; }
   h1 { font-size: 3rem; }
+  .welcome { font-size: 2.4rem; margin-bottom: 1.4rem; }
 
   .hero-inner { grid-template-columns: 1.1fr 1fr; align-items: center; gap: 3.5rem; }
   .door-grid { grid-template-columns: repeat(2, 1fr); }
