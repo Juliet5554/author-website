@@ -249,6 +249,23 @@ a { color: var(--color-link); text-underline-offset: 0.2em; }
 .byline { font-size: 1.2rem; color: var(--color-text-muted); }
 .where-to-buy { margin-bottom: 0; color: var(--color-text-muted); }
 
+/* Buy button: a plain link styled as a button (no script, no embed). Colours
+   are the site's navy and parchment, the same pairing as the skip link; the
+   site uses square corners throughout, so no border-radius. */
+.buy-button {
+  display: inline-block;
+  padding: 0.7em 1.4em;
+  background: var(--color-text);
+  color: var(--color-bg);
+  border: 2px solid var(--color-text);
+  text-decoration: none;
+}
+.buy-button:hover,
+.buy-button:focus-visible {
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
 .book-cover { margin: 0; }
 .book-cover img {
   display: block;
